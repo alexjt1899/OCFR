@@ -12,6 +12,28 @@
   </head>
 
   <body>
+  
+   <!-- nav bar modified from https://getbootstrap.com/docs/4.5/components/navbar/-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MemberListReport.html">Table</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Certificatelist.html">Certification</a>
+          </li>
+            <li class="nav-item">
+               <a class="nav-link dropdown-toggle" href="report.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Report</a> 
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="exp.html">Expired Certifications</a>
+                      <a class="dropdown-item" href="member.html">Member Reports</a>
+                    </div> 
+            </li>  
+          </ul>   
+        </nav>
 
       <h1 style="text-align:center">
           Expired Certifications Report
