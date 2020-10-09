@@ -43,33 +43,45 @@ input[type=submit]:hover {
     <label for="lname">Last Name</label>
     <input type="text" id="lname" name="lastname" placeholder="last name..">
 	
-	<label for="lname">Radio Number</label>
+	<label for="rnumber">Radio Number</label>
     <input type="text" id="lname" name="lastname" placeholder="">
 	
-	<label for="lname">address</label>
+	<label for="address">address</label>
     <input type="text" id="lname" name="lastname" placeholder="">
 	
-	<label for="lname">Phone</label>
+	<label for="phone">Phone</label>
     <input type="text" id="lname" name="lastname" placeholder="">
 	
-	<label for="lname">Email</label>
+	<label for="email">Email</label>
     <input type="text" id="lname" name="lastname" placeholder="">
 		
-	<label for="lname">Gender</label>
-    <input type="text" id="gender" name="gender placeholder="">
+	<label for="gender">Gender</label>
+    <input type="text" id="gender" name="gender" placeholder="">
 	
-	<label for="lname">Start Date</label>
+
+    <label for="position">Position</label>
+    <select id="pos" name="empos">
+      <option value="Chief">Chief</option>
+      <option value="battalion chief">Battalion Cheif</option>
+      <option value="Technician">Technician</option>
+    </select>
+	
+	<label for="Station">Station</label>
+    <select id="StationNum" name="StationNum">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+	
+	<label for="active">Active?</label>
+    <select id="active" name="active">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+	
+  	<label for= "sdate">Start Date</label>
     <input type="datetime" id="sdate" name="startdate" placeholder="">
 	
-
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-  
     <input type="submit" value="Create New User">
   </form>
 </div>
