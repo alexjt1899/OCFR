@@ -27,7 +27,7 @@ insert into People (
   EmployeeID, firstName, lastName, radioNumber, stationNumber,
   isActive, phone, email, address, gender, startDate, Position, CertExpiration) values
   ('30-7210302', 'Wynn', 'Davydenko', 2, 2, true, '(315) 7664795',
-  'wdavydenko1@youku.com', '11 Corscot Center',    
+  'wdavydenko1@youku.com', '11 Corscot Center',
   'Male', '03/27/2019', 'Driver engineer', 3);
 insert into People (
   EmployeeID, firstName, lastName, radioNumber, stationNumber,
@@ -51,8 +51,8 @@ insert into Certification (CertID, CertName, CertDate,
 insert into Certification (CertID, CertName, CertDate,
   CertExpiration, CertRenewal, CerAgency) values
   ('94-5870183', 'CPR (CPR for the Professional Rescuer/American Red Cross)', '1/21/2017', 2, 'Yes', 'Putnam Managed Municipal Income Trust');
-  
-  
+
+
 create table Person_Certification (
   	Employee_ID VARCHAR(50),
   	CertID VARCHAR(50),
@@ -65,3 +65,4 @@ create table Person_Certification (
     ('48-9870435','94-5870183');
 
 select * from Certification;
+select * from People;
