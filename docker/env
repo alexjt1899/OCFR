@@ -1,5 +1,5 @@
 
-MYSQL_DATABASE= Team2-OCFR
+MYSQL_DATABASE=Team2_OCFR
 MYSQL_HOST=team2-ocfr-db.c27mfcx0nzsk.us-east-1.rds.amazonaws.com
 MYSQL_USER=Team2
 MYSQL_PASSWORD=unemployed

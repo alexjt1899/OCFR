@@ -1,6 +1,6 @@
 FROM php:7.4-apache
 
-LABEL maintainer="Team 2
+LABEL maintainer="Tom Gregory"
 
 COPY app /srv/app
 
