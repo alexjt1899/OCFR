@@ -5,14 +5,9 @@ var app = new Vue({
 			firstName: '',
 			lastName: '',
 			station:''
-
 		}]
-
-
 	},
-	created() {
-		this.fetchUser();
-	},
+
 
 	methods: {
 		fetchUser: function(){
@@ -20,9 +15,13 @@ var app = new Vue({
 			.then(response => response.json())
 			.then(json =>  {
 				this.members =json;
-				console.log(this.);
+				console.log(this.members);
 
 			});
-		}
+		},
+
+		created() {
+			this.fetchUser();
+
 	}
-})
+});
