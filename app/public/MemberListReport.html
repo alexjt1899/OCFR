@@ -91,8 +91,11 @@
       </tbody>
     </table>
     </div>
-
-    <div>
+    <div class ="members" v-for"person in members">
+      <span class = "firstName"> First Name: {{members.firstName}}</span>,<br/>
+      <span class = "lastName"> Last Name: {{members.lastName}}</span>,<br/>
+      <span class = "station"> station: {{members.station}}</span>,
+    <div><br/>
       <h6>Please Click Here to Download</h6>
 
       <form method="get" action="file.doc">

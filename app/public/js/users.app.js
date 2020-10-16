@@ -1,23 +1,30 @@
 var app = new Vue({
 	el: '#userProfile',
 	data: {
+		members: [{
+			firstName: '',
+			lastName: '',
+			station:''
+
+		}]
 
 
 	},
-	created() {
-		this.fetchUser();
-	},
+
 
 	methods: {
 		fetchUser: function(){
-			fetch('https://randomuser.me/api')
+			fetch('api/member/')
 			.then(response => response.json())
-			.then(data =>  {
-				var userData = data.results[0];
-				console.log(userData);
-				this.userName = userData.name.first + " " + userData.name.last;
+			.then(json =>  {
+				this.member =json;
+				console.log(this.member);
 
 			});
 		}
+		created() {
+			this.fetchUser();
+		},
+
 	}
 })

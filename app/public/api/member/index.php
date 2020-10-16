@@ -1,4 +1,3 @@
-  
 <?php
 
 require 'common.php';
@@ -18,7 +17,7 @@ if (isset($_GET['EmployeeID'])) {
 $stmt = $db->prepare($sql);
 $stmt->execute($vars);
 
-$patients = $stmt->fetchAll();
+$People = $stmt->fetchAll();
 
 // Step 3: Convert to JSON
 $json = json_encode($People, JSON_PRETTY_PRINT);
