@@ -48,7 +48,11 @@
 <h3>Create New User</h3>
 
 <div>
-  <form action="/action_page.php">
+  <form action="/post.php">
+    <label for="fname">Employee ID</label>
+    <input type="text" id="EmployeeID" name="firstname">
+    <label for="fname">Certification Expiration Date</label>
+    <input type="text" id="CertExpiration" name="firstname">
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="name..">
 
@@ -56,16 +60,23 @@
     <input type="text" id="lname" name="lastname" placeholder="last name..">
 
 	<label for="rnumber">Radio Number</label>
-    <input type="text" id="lname" name="lastname" placeholder="">
+    <input type="text" id="radioNumber" name="lastname" placeholder="">
+
+<label for="Station">Station</label>
+      <select id="StationNum" name="StationNum">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
 
 	<label for="address">address</label>
-    <input type="text" id="lname" name="lastname" placeholder="">
+    <input type="text" id="address" name="lastname" placeholder="">
 
 	<label for="phone">Phone</label>
-    <input type="text" id="lname" name="lastname" placeholder="">
+    <input type="text" id="phone" name="lastname" placeholder="">
 
 	<label for="email">Email</label>
-    <input type="text" id="lname" name="lastname" placeholder="">
+    <input type="text" id="email" name="lastname" placeholder="">
 
 	<label for="gender">Gender</label>
     <input type="text" id="gender" name="gender" placeholder="">
@@ -78,12 +89,6 @@
       <option value="Technician">Technician</option>
     </select>
 
-	<label for="Station">Station</label>
-    <select id="StationNum" name="StationNum">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-    </select>
 
 	<label for="active">Active?</label>
     <select id="active" name="active">
@@ -93,6 +98,7 @@
 
   	<label for= "sdate">Start Date</label>
     <input type="datetime" id="sdate" name="startdate" placeholder="">
+
 
     <input type="submit" value="Create New User">
   </form>
