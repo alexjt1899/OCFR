@@ -10,21 +10,19 @@ var app = new Vue({
 
 
 	},
-
+	created() {
+		this.fetchUser();
+	},
 
 	methods: {
 		fetchUser: function(){
 			fetch('api/member/')
 			.then(response => response.json())
 			.then(json =>  {
-				this.member =json;
-				console.log(this.member);
+				this.members =json;
+				console.log(this.);
 
 			});
 		}
-		created() {
-			this.fetchUser();
-		},
-
 	}
 })
