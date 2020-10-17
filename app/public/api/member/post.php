@@ -4,12 +4,16 @@ require 'common.php';
 
 $db = DbConnection::getConnection();
 
-//$stmt = $db->prepare(
-//  'INSERT INTO People
-//  (EmployeeID, firstName, lastName, radioNumber, stationNumber, isActive, phone, email, address, gender, startDate, Position, CertExpiration)
-//  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)'
-//);
+$stmt = $db->prepare(
+  'INSERT INTO Certification
+  ('CertID','CertName','CerAgency','CertLength','CertDescription')
+  VALUES (?,?,?,?,?)'
+);
 
 $stmt->execute([
-
-])
+  $_POST['CertID'],
+  $_POST['CertName'],
+  $_POST['CerAgency'],
+  $_POST['CertLength'],
+  $_POST['CertDescription']
+]);
