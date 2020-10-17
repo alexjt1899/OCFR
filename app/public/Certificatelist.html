@@ -82,22 +82,22 @@
 
   <div>
 
-    <form v-on:submit.prevent ="createUser()">
-        <div class="users">
+    <form v-on:submit.prevent ="createCertification()">
+        <div class="certifications">
           <label for="CertID">CertID</label>
-          <input type="text" v-model="newUser.CertID" class="form-control" id="CertID" placeholder="00-0000000">
+          <input type="text" v-model="newCertification.CertID" class="form-control" id="CertID" placeholder="00-0000000">
 
           <label for="CertName">CertName</label>
-          <input type="text" v-model="newUser.CertName" class="form-control" id="CertName" placeholder="CPR">
+          <input type="text" v-model="newCertification.CertName" class="form-control" id="CertName" placeholder="CPR">
 
           <label for="CerAgency">CerAgency</label>
-          <input type="text" v-model="newUser.CerAgency" class="form-control" id="CerAgency">
+          <input type="text" v-model="newCertification.CerAgency" class="form-control" id="CerAgency">
 
           <label for="CertLength">CertLength</label>
-          <input type="text" v-model="newUser.CertLength" class="form-control" id="CertLength">
+          <input type="text" v-model="newCertification.CertLength" class="form-control" id="CertLength">
 
           <label for="CertDescription">CertDescription</label>
-          <input type="text" v-model="newUser.CertDescription" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
+          <input type="text" v-model="newCertification.CertDescription" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
         </div>
         <input type="submit" value="Add" class="button">
     </form>

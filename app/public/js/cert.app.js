@@ -11,13 +11,13 @@
      newCertification:{
       CertID:'',
       CertName:'',
-       CerAgenc:'',
+       CerAgency:'',
        CertLength:'',
        CertDescription:''
      }
    },
    methods:{
-     fetchUser(){
+     fetchCertification(){
        fetch('api/member/')
        .then(response => response.json())
       .then(json => {
@@ -26,8 +26,8 @@
 
 
          //Alex Added stuff Here
-         createUser()	{
-       			fetch('api/Certification/',{
+         createCertification()	{
+       			fetch('api/member/post.php/',{
        				method:'POST',
        				body: JSON.stringify(this.newCertification),
        				headers: {
@@ -56,7 +56,7 @@
        	}
       },
   created(){
-    this.fetchUser();
+    this.fetchCertification();
   }
 });
 //     createUser(){
