@@ -22,14 +22,14 @@
        .then(response => response.json())
       .then(json => {
         this.users=json;
-         console.log(this.Certification);
+         console.log(this.users);
 
 
          //Alex Added stuff Here
-         CreateCertification()	{
+         createUser()	{
        			fetch('api/Certification/',{
        				method:'POST',
-       				body: JSON.stringify(this.newCert),
+       				body: JSON.stringify(this.newCertification),
        				headers: {
        					"Content-Type": "application/json; charset=utf-8"
        				}
@@ -37,30 +37,28 @@
        			.then( response.json() )
        			.then( json => {
        					console.log("returned from post:", json);
-       					this.newCert.push(json[0]);
-       					this.newCert = this.newCertData();
+       					this.newCertification.push(json[0]);
+       					this.newCertification = this.newCertificationData();
        			});
-       			console.log("creating (POSTing)")
-       			console.log(this.newCert);
+       			console.log("Creating (POSTing)")
+       			console.log(this.newCertification);
 
        	},
 
-       	newCertData() {
+       	newCertificationData() {
        			return{
-       				CertID: "",
-       				CertName: "",
-       				CerAgency: "",
-       				CertLength:"",
-       				CertDescription:""
+       				CertID: '',
+       				CertName: '',
+       				CerAgency: '',
+       				CertLength:'',
+       				CertDescription:''
        			}
        	}
-
-
-       	}
-      
-
-       });
-     },
+      },
+  created(){
+    this.fetchUser();
+  }
+});
 //     createUser(){
 //      this.newCertification.CertID = (this.newCertification.)
 //     }
