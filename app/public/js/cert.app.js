@@ -1,4 +1,4 @@
- ver app = new Vue({
+ var app = new Vue({
   el: "#randomCert",
    data:{
     Certification: [],
