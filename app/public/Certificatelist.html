@@ -58,33 +58,37 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">Certfications:</th>
-          <th scope="col">Standard Expiry</th>
-          <th scope="col">Update Status</th>
+          <th scope="col">CertID</th>
+          <th scope="col">CertName</th>
+          <th scope="col">CerAgency</th>
+          <th scope="col">CertLength</th>
+          <th scope="col">CertDescription</th>
         </tr>
       </thead>
 
       <tbody>
         <tr>
-          <th scope="row">1</th>
           <td>CPR</td>
           <td>2 years</td>
-          <td style="text-align:center"><button type="button">Edit</button></td>
+          <td>2 years</td>
+          <td>2 years</td>
+          <td>2 years</td>
         </tr>
 
         <tr>
-          <th scope="row">2</th>
           <td>Firefighter</td>
           <td>3 years</td>
-          <td style="text-align:center"><button type="button">Edit</button></td>
+          <td>2 years</td>
+          <td>2 years</td>
+          <td>2 years</td>
         </tr>
 
         <tr>
-          <th scope="row">3</th>
           <td>POST</td>
           <td>5 years</td>
-          <td style="text-align:center"><button type="button">Edit</button></td>
+          <td>5 years</td>
+          <td>5 years</td>
+          <td>5 years</td>
         </tr>
       </tbody>
     </table>
@@ -92,14 +96,27 @@
 
 
   <div>
+
     <form>
         <div class="form-group">
-          <label for="Certfication">New Certfication</label>
-          <input type="text" class="form-control" id="Certfication" aria-describedby="CertficationHelp">
+          <label for="CertID">CertID</label>
+          <input type="text" class="form-control" id="CertID" aria-describedby="CertficationHelp">
         </div>
         <div class="form-group">
-          <label for="yearexpiry">Standard Expiry</label>
-          <input type="text" class="form-control" id="StandardExpiry">
+          <label for="CertName">CertName</label>
+          <input type="text" class="form-control" id="CertName" aria-describedby="CertficationHelp">
+        </div>
+        <div class="form-group">
+          <label for="CerAgency">CerAgency</label>
+          <input type="text" class="form-control" id="CerAgency" aria-describedby="CertficationHelp">
+        </div>
+        <div class="form-group">
+          <label for="CertLength">CertLength</label>
+          <input type="text" class="form-control" id="CertLength" aria-describedby="CertficationHelp">
+        </div>
+        <div class="form-group">
+          <label for="CertDescription">CertDescription</label>
+          <input type="text" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
         </div>
         <button type="submit" class="btn btn-primary">Add</button>
     </form>
