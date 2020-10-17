@@ -1,4 +1,4 @@
- waitingApp = new Vue({
+ ver app = new Vue({
   el: "#randomCert",
    data:{
     Certification: [],
