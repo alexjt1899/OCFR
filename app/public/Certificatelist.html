@@ -74,7 +74,7 @@
              <td> {{ Certification.CertLength }}</td>
              <td> {{ Certification.CertDescription }}</td>
          </tr>
-      </tbody>         
+      </tbody>
 
     </table>
     </div>
@@ -82,28 +82,24 @@
 
   <div>
 
-    <form>
-        <div class="form-group">
+    <form v-on:submit.prevent ="createUser()">
+        <div class="users">
           <label for="CertID">CertID</label>
-          <input type="text" class="form-control" id="CertID" aria-describedby="CertficationHelp">
-        </div>
-        <div class="form-group">
+          <input type="text" v-model="newUser.CertID" class="form-control" id="CertID" placeholder="00-0000000">
+
           <label for="CertName">CertName</label>
-          <input type="text" class="form-control" id="CertName" aria-describedby="CertficationHelp">
-        </div>
-        <div class="form-group">
+          <input type="text" v-model="newUser.CertName" class="form-control" id="CertName" placeholder="CPR">
+
           <label for="CerAgency">CerAgency</label>
-          <input type="text" class="form-control" id="CerAgency" aria-describedby="CertficationHelp">
-        </div>
-        <div class="form-group">
+          <input type="text" v-model="newUser.CerAgency" class="form-control" id="CerAgency">
+
           <label for="CertLength">CertLength</label>
-          <input type="text" class="form-control" id="CertLength" aria-describedby="CertficationHelp">
-        </div>
-        <div class="form-group">
+          <input type="text" v-model="newUser.CertLength" class="form-control" id="CertLength">
+
           <label for="CertDescription">CertDescription</label>
-          <input type="text" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
+          <input type="text" v-model="newUser.CertDescription" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
         </div>
-        <button type="submit" class="btn btn-primary">Add</button>
+        <input type="submit" value="Add" class="button">
     </form>
 </div>
 
