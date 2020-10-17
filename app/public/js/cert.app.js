@@ -1,34 +1,21 @@
  waitingApp = new Vue({
-  el: '#randomCert',
+  el: "#randomCert",
    data:{
-//     Certification: [{
-//       CertID:'',
-//       CertName:'',
-//       CerAgency:'',
-//       CertLength:'',
-//       CertDescription:''
-//     }],
+    Certification: [],
      newCertification:{
-      CertID:'',
-      CertName:'',
-       CerAgency:'',
-       CertLength:'',
-       CertDescription:''
+        CertID:"",
+        CertName:"",
+       CerAgency:"",
+       CertLength:"",
+       CertDescription:""
      }
    },
+
    methods:{
-     fetchCertification(){
-       fetch('api/member/')
-       .then(response => response.json())
-      .then(json => {
-        this.users=json;
-         console.log(this.users);
-
-
          //Alex Added stuff Here
-         createCertification()	{
-       			fetch('api/member/post.php/',{
-       				method:'POST',
+         createCertification( evt )	{
+       			fetch("api/member/post.php",{
+       				method:"POST",
        				body: JSON.stringify(this.newCertification),
        				headers: {
        					"Content-Type": "application/json; charset=utf-8"
@@ -47,17 +34,22 @@
 
        	newCertificationData() {
        			return{
-       				CertID: '',
-       				CertName: '',
-       				CerAgency: '',
-       				CertLength:'',
-       				CertDescription:''
+       				CertID: "",
+       				CertName: "",
+       				CerAgency: "",
+       				CertLength:"",
+       				CertDescription:""
        			}
        	}
       },
   created(){
-    this.fetchCertification();
-  }
+    fetch("api/member/")
+    .then(response => response.json())
+    .then( json => {
+      this.Certification = json;
+      console.log(json)}
+    );
+    }
 });
 //     createUser(){
 //      this.newCertification.CertID = (this.newCertification.)

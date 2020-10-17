@@ -6,12 +6,12 @@ require 'common.php';
 $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
-$sql = 'SELECT * FROM People';
+$sql = 'SELECT * FROM Certification';
 $vars = [];
 
-if (isset($_GET['EmployeeID'])) {
-  $sql = 'SELECT * FROM People WHERE EmployeeID = ?';
-  $vars = [ $_GET['EmployeeID'] ];
+if (isset($_GET['CertID'])) {
+  $sql = 'SELECT * FROM Certification WHERE CertID = ?';
+  $vars = [ $_GET['CertID'] ];
 }
 
 $stmt = $db->prepare($sql);
