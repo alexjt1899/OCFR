@@ -4,7 +4,17 @@ app = new Vue({
     usersList: [{
       EmployeeID: '',
       firstName: '',
-      lastName:''
+      lastName:'',
+      radioNumber:'',
+    	stationNumber:'',
+    	isActive:'',
+    	phone:'',
+    	email:'',
+    	address:'',
+    	gender:'',
+    	startDate:'',
+    	Position:'',
+    	CertExpiration:''
     }],
     newUser: {
       EmployeeID: '',
