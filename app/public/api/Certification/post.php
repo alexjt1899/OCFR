@@ -17,5 +17,8 @@ $stmt->execute([
   $_POST['CertLength'],
   $_POST['CertDescription']
 ]);
+//header('HTTP/1.1 303 See Other');
+//header('Location: ../member/?CertID=' . $_POST['CertID']);
+
 header('HTTP/1.1 303 See Other');
-header('Location: ../member/?CertID=' . $_POST['CertID']);
+header('Location: ../user/');

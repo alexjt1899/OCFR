@@ -17,10 +17,10 @@ if (isset($_GET['CertID'])) {
 $stmt = $db->prepare($sql);
 $stmt->execute($vars);
 
-$People = $stmt->fetchAll();
+$Certification = $stmt->fetchAll();
 
 // Step 3: Convert to JSON
-$json = json_encode($People, JSON_PRETTY_PRINT);
+$json = json_encode($Certification, JSON_PRETTY_PRINT);
 
 // Step 4: Output
 header('Content-Type: application/json');

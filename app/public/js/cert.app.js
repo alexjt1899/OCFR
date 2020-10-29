@@ -12,16 +12,16 @@
    },
 
    methods:{
-         //Alex Added stuff Here
+
          createCertification( evt )	{
-       			fetch("api/member/post.php",{
+       			fetch("api/Certification/post.php",{
        				method:"POST",
        				body: JSON.stringify(this.newCertification),
        				headers: {
        					"Content-Type": "application/json; charset=utf-8"
        				}
        			})
-       			.then( response.json() )
+       			.then( response => response.json() )
        			.then( json => {
        					console.log("returned from post:", json);
        					this.newCertification.push(json[0]);
@@ -43,7 +43,7 @@
        	}
       },
   created(){
-    fetch("api/member/")
+    fetch("api/Certification/")
     .then(response => response.json())
     .then( json => {
       this.Certification = json;
