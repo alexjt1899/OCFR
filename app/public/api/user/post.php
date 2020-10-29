@@ -28,5 +28,10 @@ $stmt->execute([
 // Step 4: Output
 // Here, instead of giving output, I'm redirecting to the SELECT API,
 // just in case the data changed by entering it
-header('HTTP/1.1 303 See Other');
+ header('HTTP/1.1 303 See Other');
 header('Location: ../user/');
+
+// $personId = $db->lastInsertID();
+// header('HTTP/1.1 303 See Other');
+// header('Content-Type: application/json');
+// header('Location: ../list/?personId=' . $personId);
