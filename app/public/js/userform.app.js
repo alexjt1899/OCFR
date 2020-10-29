@@ -19,17 +19,27 @@ app = new Vue({
     newUser: {
       EmployeeID: '',
       firstName: '',
-      lastName:''
+      lastName:'',
+      radioNumber:'',
+    	stationNumber:'',
+    	isActive:'',
+    	phone:'',
+    	email:'',
+    	address:'',
+    	gender:'',
+    	startDate:'',
+    	Position:'',
+    	CertExpiration:''
     }
   },
 
   methods:{
     fetchUser(){
-      fetch('api/user/')
+      fetch('api/user/get.php')
       .then(response => response.json())
       .then(json => {
-        this.userList=json;
-        console.log(this.userList);
+        this.usersList=json;
+        console.log(this.usersList);
       });
     },
 
@@ -44,12 +54,15 @@ app = new Vue({
       .then( response => response.json() )
       .then( json => {
         console.log("Returned from post:", json);
-        this.userList = json;
+        this.usersList.push(json[0]);
         this.newUser = this.newUserData();
+        //this.usersList = json;
+        //this.newUser = this.newUserData();
       });
 
       console.log("Creating (POSTing)...!");
       console.log(this.newUser);
+      this.fetchUser();
     },
     newUserData() {
       return {

@@ -12,14 +12,14 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
-  'INSERT INTO People (EmployeeID,firstName,LastName,)
+  'INSERT INTO People (EmployeeID,firstName,lastName)
   VALUES (?,?,?)'
 );
 
 $stmt->execute([
   $_POST['EmployeeID'],
   $_POST['firstName'],
-  $_POST['LastName'],
+  $_POST['lastName']
 ]);
 
 // If needed, get auto-generated PK from DB
