@@ -11,7 +11,7 @@ var app = new Vue({
 
 	methods: {
 		fetchUser: function(){
-			fetch('api/member/')
+			fetch('api/user/get.php')
 			.then(response => response.json())
 			.then(json =>  {
 				this.members =json;
