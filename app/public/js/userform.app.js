@@ -25,11 +25,11 @@ app = new Vue({
 
   methods:{
     fetchUser(){
-      fetch('api/user/')
+      fetch('api/user/get.php')
       .then(response => response.json())
       .then(json => {
-        this.userList=json;
-        console.log(this.userList);
+        this.usersList=json;
+        console.log(this.usersList);
       });
     },
 
