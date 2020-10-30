@@ -8,6 +8,7 @@ app = new Vue({
         CertLength:"",
         CertDescription:""
     }],
+
      newCertification: {
         CertID:"",
         CertName:"",
@@ -49,7 +50,7 @@ app = new Vue({
   },
 
   newCertificationData() {
-    return{
+    return {
       CertID: "",
       CertName: "",
       CerAgency: "",
