@@ -10,6 +10,12 @@
      }]
    },
 
+   created() {
+   this.fetchCert();
+  console.log("Testing Created");
+
+   },
+
    methods:{
 fetchCert(){
   fetch("api/Certification/expiredReport.php")
@@ -17,20 +23,11 @@ fetchCert(){
   .then( json => {
     this.CertificationList = json;
     console.log(json)})
-},
-
-created() {
-this.fetchCert;
-console.log("WORK");
 }
+
+
 
 }
 
 
 });
-//     createUser(){
-//      this.newCertification.CertID = (this.newCertification.)
-//     }
-//   }
-//
-// })
