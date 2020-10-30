@@ -39,7 +39,7 @@ app = new Vue({
     	console.log("Returned from post:", json);
     	this.certList.push(json[0]);
     	this.newCertification = this.newCertificationData();
-    }),
+    })
 
     .then( this.fetchUser());
 
