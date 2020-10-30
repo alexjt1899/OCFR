@@ -54,26 +54,25 @@
       </h1>
 
 
-<div id='expCert'>
+<div id="expCert">
     <div>
     <table class="table table-bordered">
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">UserID</th>
             <th scope="col">Name</th>
           <th scope="col">Certfication</th>
           <th scope="col">Days Past Expiration</th>
         </tr>
       </thead>
-
       <tbody>
-        <tr v-for="cert in Certification">
+        <tr v-for="cert in CertificationList">
           <th scope="row">{{ cert.Person_certID }}</th>
           <td> {{ cert.Name }}</td>
           <td> {{ cert.CertName }}</td>
           <td>{{ cert.ExpDate }}</td>
         </tr>
+
 
       </tbody>
     </table>
@@ -84,6 +83,9 @@
 
       <form method="get" action="file.doc">
           <button type="submit">Download</button>
+</form>
+<form id=expCert v-on:submit.prevent="fetchCert()">
+              <button>RELOAD</button>
       </form>
     </div>
 </div>
