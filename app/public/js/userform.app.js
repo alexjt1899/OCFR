@@ -59,7 +59,7 @@ app = new Vue({
         //this.usersList = json;
         //this.newUser = this.newUserData();
       })
-      .then( this,fetchUser());
+      .then( this.fetchUser());
 
       console.log("Creating (POSTing)...!");
       console.log(this.newUser);
