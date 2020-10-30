@@ -1,0 +1,27 @@
+<?php
+
+require 'common.php';
+
+// Step 1: Get a datase connection from our helper class
+$db = DbConnection::getConnection();
+$vars = [];
+
+// Step 2: Create & run the query
+$sql = 'SELECT firstName, lastName, certEndDate, certName
+        FROM Person p
+        JOIN PeopleCert pc on pc.personID = p.personID
+        JOIN Cert c on pc.certID = c.certID
+        WHERE pc.certEndDate < NOW()';
+
+$stmt = $db->prepare($sql);
+$stmt->execute($vars);
+
+$people = $stmt->fetchAll();
+
+// Step 3: Convert to JSON
+$json = json_encode($people, JSON_PRETTY_PRINT);
+
+// Step 4: Output
+header('Content-Type: application/json');
+echo $json;
+?>
