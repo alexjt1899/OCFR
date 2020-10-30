@@ -56,8 +56,7 @@ app = new Vue({
         console.log("Returned from post:", json);
         this.usersList.push(json[0]);
         this.newUser = this.newUserData();
-        //this.usersList = json;
-        //this.newUser = this.newUserData();
+
       })
       .then( this.fetchUser());
 
