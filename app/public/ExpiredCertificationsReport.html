@@ -54,7 +54,7 @@
       </h1>
 
 
-
+<div id='expCert'>
     <div>
     <table class="table table-bordered">
       <thead>
@@ -68,29 +68,13 @@
       </thead>
 
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>12</td>
-          <td>John Smith</td>
-          <td>CPR</td>
-          <td>180</td>
+        <tr v-for="cert in Certification">
+          <th scope="row">{{ cert.Person_certID }}</th>
+          <td> {{ cert.Name }}</td>
+          <td> {{ cert.CertName }}</td>
+          <td>{{ cert.ExpDate }}</td>
         </tr>
 
-        <tr>
-          <th scope="row">2</th>
-          <td>3</td>
-          <td>Jason Lee</td>
-          <td>Firefighter</td>
-          <td>23</td>
-        </tr>
-
-        <tr>
-          <th scope="row">3</th>
-          <td>7</td>
-          <td>Chris Franklin</td>
-          <td>CPR</td>
-          <td>1</td>
-        </tr>
       </tbody>
     </table>
     </div>
@@ -102,7 +86,7 @@
           <button type="submit">Download</button>
       </form>
     </div>
-
+</div>
 
   </body>
 
@@ -115,4 +99,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src=“assets/js/bootstrap-dropdown.js” type=“text/javascript”></script>
+      <script src="js/expcert.app.js"></script>
 </html>
