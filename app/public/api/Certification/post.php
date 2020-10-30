@@ -21,4 +21,4 @@ $stmt->execute([
 //header('Location: ../member/?CertID=' . $_POST['CertID']);
 
 header('HTTP/1.1 303 See Other');
-header('Location: ../user/');
+header('Location: ../Certification');
