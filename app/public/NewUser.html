@@ -58,6 +58,15 @@
         <th scope="col">EmployeeID</th>
         <th scope="col">firstName</th>
         <th scope="col">lastName</th>
+        <th scope="col">radioNumber</th>
+        <th scope="col">stationNumber</th>
+        <th scope="col">isActive</th>
+        <th scope="col">Position</th>
+        <th scope="col">phone</th>
+        <th scope="col">address</th>
+        <th scope="col">gender</th>
+        <th scope="col">startDate</th>
+        <th scope="col">email</th>
       </tr>
     </thead>
     <tbody id="userTableBody">
@@ -65,6 +74,15 @@
         <td>{{ USER.EmployeeID }}</td>
         <td>{{ USER.firstName }}</td>
         <td>{{ USER.lastName }}</td>
+        <td> {{USER.radioNumber}}</td>
+        <td> {{USER.stationNumber}}</td>
+        <td> {{USER.isActive}}</td>
+        <td> {{USER.Position}}</td>
+        <td> {{USER.phone}}</td>
+        <td> {{USER.address}}</td>
+        <td> {{USER.gender}}</td>
+        <td> {{USER.startDate}}</td>
+        <td> {{USER.email}}</td>
       </tr>
     </tbody>
   </table>
@@ -77,6 +95,24 @@
         <input type="textarea" v-model="newUser.firstName" class="form-control" id="firstName">
         <label for="lastName"> lastName </label>
         <input type="textarea" v-model="newUser.lastName" class="form-control" id="lastName">
+        <label for="radioNumber"> Radio Number </label>
+        <input type="textarea" v-model="newUser.radioNumber" class="form-control" id="radioNumber">
+        <label for="lastName"> lastName </label>
+        <input type="textarea" v-model="newUser.lastName" class="form-control" id="stationNumber">
+        <label for="lastName"> lastName </label>
+        <input type="textarea" v-model="newUser.lastName" class="form-control" id="isActive">
+        <label for="lastName"> lastName </label>
+        <input type="textarea" v-model="newUser.lastName" class="form-control" id="phone">
+        <label for="lastName"> lastName </label>
+        <input type="textarea" v-model="newUser.lastName" class="form-control" id="email">
+        <label for="lastName"> lastName </label>
+        <input type="textarea" v-model="newUser.lastName" class="form-control" id="address">
+        <label for="lastName"> lastName </label>
+        <input type="textarea" v-model="newUser.lastName" class="form-control" id="gender">
+        <label for="lastName"> lastName </label>
+        <input type="textarea" v-model="newUser.lastName" class="form-control" id="startDate">
+        <label for="lastName"> lastName </label>
+        <input type="textarea" v-model="newUser.lastName" class="form-control" id="Position">
     </div><br/>
     <input type="submit" value="Create New User" class="button" id="submitNewUser">
   </form>

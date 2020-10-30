@@ -19,7 +19,16 @@ $stmt = $db->prepare(
 $stmt->execute([
   $_POST['EmployeeID'],
   $_POST['firstName'],
-  $_POST['lastName']
+  $_POST['lastName'],
+  $_POST['radioNumber'],
+  $_POST['stationNumber'],
+  $_POST['isActive'],
+  $_POST['phone'],
+  $_POST['email'],
+  $_POST['address'],
+  $_POST['gender'],
+  $_POST['startDate'],
+  $_POST['Position']
 ]);
 
 // If needed, get auto-generated PK from DB
