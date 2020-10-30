@@ -1,27 +1,20 @@
 <?php
 
-require 'common.php';
+  require 'common.php';
 
-// Step 1: Get a datase connection from our helper class
-$db = DbConnection::getConnection();
+  $db = DbConnection::getConnection();
 
-// Step 2: Create & run the query
-$sql = 'SELECT * FROM Certification';
-$vars = [];
+  $stmt = $db->prepare (
+    "SELECT * FROM Certification AS c"
+  );
 
-if (isset($_GET['CertID'])) {
-  $sql = 'SELECT * FROM Certification WHERE CertID = ?';
-  $vars = [ $_GET['CertID'] ];
-}
+  $stmt->execute();
 
-$stmt = $db->prepare($sql);
-$stmt->execute($vars);
+  $certificates = $stmt->fetchAll();
 
-$Certification = $stmt->fetchAll();
+  $json = json_encode($certificates, JSON_PRETTY_PRINT);
 
-// Step 3: Convert to JSON
-$json = json_encode($Certification, JSON_PRETTY_PRINT);
+  header('Content-Type: application/json');
+  echo $json;
 
-// Step 4: Output
-header('Content-Type: application/json');
-echo $json;
+?>
