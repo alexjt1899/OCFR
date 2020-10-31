@@ -52,56 +52,59 @@
       </ul>
     </nav>
 
-    <h1 style="text-align:center">
-      Welcome To CertificatesList
-    </h1>
-    <div id="randomCert">
+    <h1 style="text-align:center">  Welcome To CertificatesList</h1>
+    <div id="randomUser">
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th scope="col">CertID</th>
-            <th scope="col">CertName</th>
-            <th scope="col">CerAgency</th>
-            <th scope="col">Standard Expiration Period</th>
-            <th scope="col">CertDescription</th>
+            <th scope="col">EmployeeID</th>
+            <!-- <th scope="col">firstName</th>
+            <th scope="col">lastName</th>
+            <th scope="col">radioNumber</th>
+            <th scope="col">stationNumber</th>
+            <th scope="col">isActive</th>
+            <th scope="col">Position</th>
+            <th scope="col">phone</th>
+            <th scope="col">address</th>
+            <th scope="col">gender</th>
+            <th scope="col">startDate</th>
+            <th scope="col">email</th> -->
           </tr>
         </thead>
-        <tbody class="text-center">
-          <tr v-for="Cert in certList">
-            <td> {{ Cert.CertID }}</td>
-            <td> {{ Cert.CertName }}</td>
-            <td> {{ Cert.CerAgency }}</td>
-            <td> {{ Cert.CertLength }}</td>
-            <td> {{ Cert.CertDescription }}</td>
+        <tbody id="userTableBody">
+          <tr v-for="USER in usersList">
+            <td>{{ USER.EmployeeID }}</td>
+            <td>{{ USER.firstName }}</td>
+            <td>{{ USER.lastName }}</td>
+            <td> {{USER.radioNumber}}</td>
+            <td> {{USER.stationNumber}}</td>
+            <!-- <td> {{USER.isActive}}</td>
+            <td> {{USER.Position}}</td>
+            <td> {{USER.phone}}</td>
+            <td> {{USER.address}}</td>
+            <td> {{USER.gender}}</td>
+            <td> {{USER.startDate}}</td>
+            <td> {{USER.email}}</td> -->
           </tr>
         </tbody>
       </table>
-      <div>
-        <form v-on:submit.prevent ="createCertification()">
-          <div class="certifications">
-            <label for="CertID">CertID</label>
-            <input type="text" v-model="newCertification.CertID" class="form-control" id="CertID" placeholder="00-0000000">
 
-            <label for="CertName">CertName</label>
-            <input type="text" v-model="newCertification.CertName" class="form-control" id="CertName" placeholder="CPR">
-
-            <label for="CerAgency">CerAgency</label>
-            <input type="text" v-model="newCertification.CerAgency" class="form-control" id="CerAgency">
-
-            <label for="CertLength">Standard Expiration Period</label>
-            <input type="text" v-model="newCertification.CertLength" class="form-control" id="CertLength">
-
-            <label for="CertDescription">CertDescription</label>
-            <input type="text" v-model="newCertification.CertDescription" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
-          </div>
-          <input type="submit" value="Add New Certification" class="button">
+      <form v-on:submit.prevent ="deleteUser()">
+        <div class="col">
+            <label for="ID"> EmployeeID </label>
+            <input type="textarea" v-model="user.EmployeeID" class="form-control" id="EmployeeID">
+            <div id="success"></div>
+                <button class="btn btn-primary btn-xl text-uppercase" onclick="success()" id="submit" type="submit">Delete Member</button>
+            </div>
         </form>
-
-        <input type="submit" value="Edit Certification" class="button">
-        <form action = "deleteCert.html">
-          <input type="submit" value="Delete Certification" class="button">
-      </div>
     </div>
+
+    <form method="post" action="NewUser.html" id="members" name="members" novalidate="novalidate">
+      <div class="text-center">
+          <div id="success"></div>
+          <button class="btn btn-primary btn-xl text-uppercase" id="members" type="submit">Return</button>
+      </div>
+    </form>
   </body>
 
   <!-- development version, includes helpful console warnings -->
@@ -110,8 +113,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src=“assets/js/bootstrap-dropdown.js” type=“text/javascript”></script>
-  <script src="js/cert.app.js"></script>
+  <script src="js/deleteuser.app.js"></script>
 
 </html>
-<!-- //type="application/javascript"
-//type="text/javascript" -->
