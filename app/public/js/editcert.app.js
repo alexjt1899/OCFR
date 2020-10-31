@@ -2,7 +2,14 @@ var randomCert = new Vue({
   el: '#randomCert',
   data: {
     certList: [],
-    certification: {}
+    newCertification: {},
+    choose: {
+      CertID: "",
+      CertName: "",
+      CerAgency: "",
+      CertLength: "",
+      CertDescription: ""
+    }
   },
   methods: {
     fetchCertificate() {
@@ -12,9 +19,9 @@ var randomCert = new Vue({
     },
 
     editCertification() {
-      fetch('api/Certification/delete.php', {
+      fetch('api/Certification/edit.php', {
         method:'POST',
-        body: JSON.stringify(this.certification),
+        body: JSON.stringify(this.newCertification),
         headers:{
           "Content-Type": "application/json; charset=utf-8"
         }
@@ -25,7 +32,7 @@ var randomCert = new Vue({
       },
 
       handleData() {
-        this.certification = {
+        this.newCertification = {
           CertID: ""
         }
       }

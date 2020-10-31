@@ -5,14 +5,23 @@ require 'common.php';
 $db = DbConnection::getConnection();
 
 $stmt = $db->prepare(
-  'DELETE FROM Certification WHERE CertID = ?'
+  'INSERT INTO Certification
+  (CertID, CertName, CerAgency, CertLength, CertDescription)
+  VALUES (?,?,?,?,?)'
 );
 
 $stmt->execute([
-  $_POST['CertID']
+  $_POST['CertID'],
+  $_POST['CertName'],
+  $_POST['CerAgency'],
+  $_POST['CertLength'],
+  $_POST['CertDescription']
 ]);
 
 header('HTTP/1.1 303 See Other');
 
 header('Location: ../Certification/');
 ?>
+
+<!-- If auto generate works, remove CertID from prepare, execute
+$CertID = $db->lastInsertID(); -->
