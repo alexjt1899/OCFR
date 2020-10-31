@@ -77,8 +77,8 @@
         </tbody>
       </table>
 
-        <form v-on:submit.prevent ="createCertification()">
-          <div class="certifications">
+        <form v-on:submit.prevent ="editCertification()">
+          <div class="col">
             <label for="CertID">CertID</label>
             <input type="text" v-model="newCertification.CertID" class="form-control" id="CertID" placeholder="00-0000000">
 
@@ -93,10 +93,10 @@
 
             <label for="CertDescription">CertDescription</label>
             <input type="text" v-model="newCertification.CertDescription" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
+            <div id="success"></div>
+            <button class="btn btn-primary btn-xl text-uppercase" onclick="success()" id="submit" type="submit">Edit Certifcation</button>
           </div>
-          <button class="btn btn-primary btn-xl text-uppercase" onclick="success()" id="submit" type="submit">Edit Certifcation</button>
         </form>
-
       </div>
 
       <form method="post" action="Certificatelist.html" id="certificates" name="certificates" novalidate="novalidate">
@@ -105,7 +105,6 @@
             <button class="btn btn-primary btn-xl text-uppercase" id="certificates" type="submit">Return</button>
         </div>
       </form>
-    </div>
   </body>
 
   <!-- development version, includes helpful console warnings -->
