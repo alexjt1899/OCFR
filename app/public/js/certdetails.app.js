@@ -2,9 +2,7 @@ var certdetail = new Vue({
   el: "#certdetail",
    data:{
     certdetailList: [{
-        Person_certID:"",
-        CertID: '',
-        EmployeeID:''
+      Name:''
     }]
     },
 
@@ -13,13 +11,7 @@ var certdetail = new Vue({
     },
 
    methods:{
-     newCertdetailData() {
-       return {
-         Person_certID:"",
-         CertID: '',
-         EmployeeID:''
-       }
-     },
+
 
     fetchCertdetail(){
       fetch('api/certdetail/index.php')

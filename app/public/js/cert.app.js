@@ -14,11 +14,16 @@ var randomCert = new Vue({
         CerAgency:"",
         CertLength:"",
         CertDescription:""
-      }
+      },
+
+      certdetailList: [{
+        Name:''
+      }]
     },
 
     created() {
       this.fetchCertificate();
+        this.fetchCertdetail();
     },
 
    methods:{
@@ -54,8 +59,19 @@ var randomCert = new Vue({
 	        this.certList = json;
     	    this.newCertification = this.newCertificationData();
         });
+      },
+      
+      fetchCertdetail(){
+        fetch('api/certdetail/index.php')
+        .then(response => response.json())
+        .then(json => {
+          this.certdetailList=json;
+          console.log(this.certdetailList);
+        });
       }
+
     },
+
 });
 
 

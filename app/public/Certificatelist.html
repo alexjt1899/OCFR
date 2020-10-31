@@ -84,10 +84,11 @@
             <td>
               <div class="collapse" id="collapseExample">
                 <div id="certdetail">
-                  <tr v-for='detail in certdetailList'>
-                  <td>{{ detail.Person_certID }}</td>
-                  <td>{{ detail.CertID }}</td>
-                  <td>{{ detail.EmployeeID }}</td>
+                  <ul>
+                    <li v-for="Detail in certdetailList">
+                        {{ Detail.Name }}
+                    </li>
+                  </ul>
                 </tr>
                 </div>
               </div>
