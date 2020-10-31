@@ -35,7 +35,12 @@ insert into People (
   ('48-9870435', 'Lark', 'Scutt', 3, 3, true, '(702) 7812105',
   'lscutt2@scribd.com', '909 4th Street',
   'Female', '06/23/2019', 'Fire chief', 4);
-
+	insert into People (
+	  EmployeeID, firstName, lastName, radioNumber, stationNumber,
+	  isActive, phone, email, address, gender, startDate, Position, CertExpiration) values
+	  ('49-1234567', 'Cindy', 'Lee', 3, 4, true, '(812) 1234567',
+	  'leeCindy@iu.com', '233 5th Street',
+	  'Female', '06/23/2019', 'Firefighter I (Athens Technical College', 4);
 DROP TABLE IF EXISTS Certification;
 create table Certification (
     CertID VARCHAR(50) primary key,
