@@ -58,7 +58,6 @@ var randomCert = new Vue({
     },
 });
 
-
   // created() {
   // fetch("api/Certification/")
   // .then(response => response.json())

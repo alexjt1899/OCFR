@@ -56,7 +56,7 @@
       Welcome To CertificatesList
     </h1>
     <div id="randomCert">
-      <table class="table table-bordered">
+      <table class="table table-bordered" data-show-toggle="false">
         <thead>
           <tr>
             <th scope="col">CertID</th>
@@ -64,22 +64,27 @@
             <th scope="col">CerAgency</th>
             <th scope="col">Standard Expiration Period</th>
             <th scope="col">CertDescription</th>
-            <th scope="col">Details</th>
-          </tr>
+            <th>detail</th>
 
+            </details>
+          </tr>
         </thead>
+
         <tbody class="text-center">
-          <tr v-for="Cert in certList">
+          <tr v-for="Cert in certList" data-expanded="true">
             <td> {{ Cert.CertID }}</td>
             <td> {{ Cert.CertName }}</td>
             <td> {{ Cert.CerAgency }}</td>
             <td> {{ Cert.CertLength }}</td>
             <td> {{ Cert.CertDescription }}</td>
-            <td>
-            <form action="CertDetail.html">
-              <input type="submit" value="More Details"/>
-            </form>
-          </td>
+            <th><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              details</button></th>
+              <th><div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
+              </div></th>
+
           </tr>
         </tbody>
       </table>
@@ -122,7 +127,6 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src=“assets/js/bootstrap-dropdown.js” type=“text/javascript”></script>
   <script src="js/cert.app.js"></script>
-
 </html>
 <!-- //type="application/javascript"
 //type="text/javascript" -->
