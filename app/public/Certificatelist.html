@@ -62,7 +62,7 @@
             <th scope="col">CertID</th>
             <th scope="col">CertName</th>
             <th scope="col">CerAgency</th>
-            <th scope="col">CertLength</th>
+            <th scope="col">Standard Expiration Period</th>
             <th scope="col">CertDescription</th>
             <th scope="col">Details</th>
           </tr>
@@ -83,7 +83,7 @@
           </tr>
         </tbody>
       </table>
-      <div>
+
         <form v-on:submit.prevent ="createCertification()">
           <div class="certifications">
             <label for="CertID">CertID</label>
@@ -95,18 +95,22 @@
             <label for="CerAgency">CerAgency</label>
             <input type="text" v-model="newCertification.CerAgency" class="form-control" id="CerAgency">
 
-            <label for="CertLength">CertLength</label>
+            <label for="CertLength">Standard Expiration Period</label>
             <input type="text" v-model="newCertification.CertLength" class="form-control" id="CertLength">
 
             <label for="CertDescription">CertDescription</label>
             <input type="text" v-model="newCertification.CertDescription" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
           </div>
+
           <input type="submit" value="Add New Certification" class="button">
         </form>
 
+        <form action = "editCert.html">
         <input type="submit" value="Edit Certification" class="button">
+        </form>
+
         <form action = "deleteCert.html">
-          <input type="submit" value="Delete Certification" class="button">
+        <input type="submit" value="Delete Certification" class="button">
       </div>
     </div>
   </body>

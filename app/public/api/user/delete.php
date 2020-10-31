@@ -5,14 +5,14 @@ require 'common.php';
 $db = DbConnection::getConnection();
 
 $stmt = $db->prepare(
-  'DELETE FROM Certification WHERE CertID = ?'
+  'DELETE FROM People WHERE EmployeeID = ?'
 );
 
 $stmt->execute([
-  $_POST['CertID']
+  $_POST['EmployeeID']
 ]);
 
 header('HTTP/1.1 303 See Other');
 
-header('Location: ../Certification/');
+header('Location: ../user/');
 ?>

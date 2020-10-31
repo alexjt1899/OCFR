@@ -49,7 +49,7 @@
     </nav>
 
 
-<h3>Create New User</h3>
+    <h1 style="text-align:center">Welcome To Member List</h1>
 
 <div id="users">
   <table id="userTable" class="table table-striped table-dark" >
@@ -86,7 +86,7 @@
       </tr>
     </tbody>
   </table>
-
+<div>
   <form id="newUserForm" v-on:submit.prevent ="createUser()">
     <div class="userList">
         <label for="ID"> EmployeeID </label>
@@ -113,10 +113,17 @@
         <input type="textarea" v-model="newUser.startDate" class="form-control" id="startDate">
         <label for="Position"> Position </label>
         <input type="textarea" v-model="newUser.Position" class="form-control" id="Position">
-    </div><br/>
-    <input type="submit" value="Create New User" class="button" id="submitNewUser">
+    </div>
+
+    <input type="submit" value="Add New Member" class="button">
   </form>
+
+  <input type="submit" value="Edit Member" class="button">
+  <form action = "deleteUser.html">
+    <input type="submit" value="Delete Member" class="button">
 </div>
+</div>
+</body>
 
 <!-- <div>
   <form action="/post.php">

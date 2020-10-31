@@ -52,45 +52,60 @@
       </ul>
     </nav>
 
-    <h1 style="text-align:center">  Welcome To CertificatesList</h1>
+    <h1 style="text-align:center">
+      Welcome To CertificatesList
+    </h1>
     <div id="randomCert">
       <table class="table table-bordered">
         <thead>
           <tr>
             <th scope="col">CertID</th>
-            <!-- <th scope="col">CertName</th>
+            <th scope="col">CertName</th>
             <th scope="col">CerAgency</th>
             <th scope="col">CertLength</th>
             <th scope="col">CertDescription</th>
-          </tr> -->
+          </tr>
         </thead>
         <tbody class="text-center">
           <tr v-for="Cert in certList">
             <td> {{ Cert.CertID }}</td>
             <td> {{ Cert.CertName }}</td>
-            <!--<td> {{ Cert.CerAgency }}</td>
+            <td> {{ Cert.CerAgency }}</td>
             <td> {{ Cert.CertLength }}</td>
-            <td> {{ Cert.CertDescription }}</td> -->
+            <td> {{ Cert.CertDescription }}</td>
           </tr>
         </tbody>
       </table>
 
-      <form v-on:submit.prevent ="deleteCertification()">
-        <div class="col">
-          <label for="CertID">CertID</label>
-          <input type="text" v-model="certification.CertID" class="form-control" id="CertID" placeholder="00-0000000">
-          <div id="success"></div>
-          <button class="btn btn-primary btn-xl text-uppercase" onclick="success()" id="submit" type="submit">Delete Certifcation</button>
+        <form v-on:submit.prevent ="createCertification()">
+          <div class="certifications">
+            <label for="CertID">CertID</label>
+            <input type="text" v-model="newCertification.CertID" class="form-control" id="CertID" placeholder="00-0000000">
+
+            <label for="CertName">CertName</label>
+            <input type="text" v-model="newCertification.CertName" class="form-control" id="CertName" placeholder="CPR">
+
+            <label for="CerAgency">CerAgency</label>
+            <input type="text" v-model="newCertification.CerAgency" class="form-control" id="CerAgency">
+
+            <label for="CertLength">CertLength</label>
+            <input type="text" v-model="newCertification.CertLength" class="form-control" id="CertLength">
+
+            <label for="CertDescription">CertDescription</label>
+            <input type="text" v-model="newCertification.CertDescription" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
+          </div>
+          <button class="btn btn-primary btn-xl text-uppercase" onclick="success()" id="submit" type="submit">Edit Certifcation</button>
+        </form>
+
+      </div>
+
+      <form method="post" action="Certificatelist.html" id="certificates" name="certificates" novalidate="novalidate">
+        <div class="text-center">
+            <div id="success"></div>
+            <button class="btn btn-primary btn-xl text-uppercase" id="certificates" type="submit">Return</button>
         </div>
       </form>
     </div>
-
-    <form method="post" action="Certificatelist.html" id="certificates" name="certificates" novalidate="novalidate">
-      <div class="text-center">
-          <div id="success"></div>
-          <button class="btn btn-primary btn-xl text-uppercase" id="certificates" type="submit">Return</button>
-      </div>
-    </form>
   </body>
 
   <!-- development version, includes helpful console warnings -->
@@ -99,7 +114,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src=“assets/js/bootstrap-dropdown.js” type=“text/javascript”></script>
-  <script src="js/deletecert.app.js"></script>
+  <script src="js/cert.app.js"></script>
 
 </html>
 <!-- //type="application/javascript"
