@@ -17,7 +17,9 @@ var randomCert = new Vue({
       },
 
       certdetailList: [{
+        ID:''
         Name:''
+
       }]
     },
 
@@ -27,6 +29,11 @@ var randomCert = new Vue({
     },
 
    methods:{
+
+     DoQueryStuff() {
+       
+     }
+
      newCertificationData() {
        return {
          CertID: "",
@@ -60,7 +67,7 @@ var randomCert = new Vue({
     	    this.newCertification = this.newCertificationData();
         });
       },
-      
+
       fetchCertdetail(){
         fetch('api/certdetail/index.php')
         .then(response => response.json())
