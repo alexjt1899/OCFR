@@ -10,7 +10,7 @@ $sql = 'SELECT cp.Person_certID, c.CertName, CONCAT(p.firstName, lastName) as Na
 $vars = [];
 
 if (isset($_GET['Person_certID'])) {
-  $sql = 'SELECT cp.Person_certID, c.CertName, CONCAT(p.firstName, lastName) as Name, c.CertLength + cp.CertDate as ExpDate FROM Certification c, Person_Certification cp, People p where  c.CertID = cp.certID AND cp.EmployeeID=p.EmployeeID AND Person_certID=? Group by c.certID, cp.employeeID';
+  $sql = 'SELECT cp.Person_certID, c.CertName, CONCAT(p.firstName, lastName) as Name, c.CertLength + cp.CertDate as ExpDate FROM Certification c, Person_Certification cp, People p where  c.CertID = cp.CertID AND cp.EmployeeID=p.EmployeeID AND Person_certID=? Group by c.CertID, cp.EmployeeID';
   $vars = [ $_GET['Person_certID'] ];
 }
 
