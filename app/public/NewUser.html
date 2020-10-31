@@ -87,36 +87,41 @@
     </tbody>
   </table>
 <div>
+
+<h2> To Add a New Member, Please fill in the form below and click "Add New Member"</h2>
   <form id="newUserForm" v-on:submit.prevent ="createUser()">
     <div class="userList">
-        <label for="ID"> EmployeeID </label>
-        <input type="textarea" v-model="newUser.EmployeeID" class="form-control" id="EmployeeID">
-        <label for="firstName"> firstName </label>
+      <!--  <label for="ID"> EmployeeID </label>
+        <input type="textarea" v-model="newUser.EmployeeID" class="form-control" id="EmployeeID"> -->
+        <label for="firstName"> First Name: </label>
         <input type="textarea" v-model="newUser.firstName" class="form-control" id="firstName">
-        <label for="lastName"> lastName </label>
+        <label for="lastName"> Last Name: </label>
         <input type="textarea" v-model="newUser.lastName" class="form-control" id="lastName">
-        <label for="radioNumber"> Radio Number </label>
+        <label for="radioNumber"> Radio Number: </label>
         <input type="textarea" v-model="newUser.radioNumber" class="form-control" id="radioNumber">
-        <label for="stationNumber"> Station Number </label>
+        <label for="stationNumber"> Station Number: </label>
         <input type="textarea" v-model="newUser.stationNumber" class="form-control" id="stationNumber">
-        <label for="isActive"> is Active </label>
+        <label for="isActive"> Is Active? </label>
         <input type="textarea" v-model="newUser.isActive" class="form-control" id="isActive">
-        <label for="phone"> phone </label>
+        <label for="phone"> Phone Number: </label>
         <input type="textarea" v-model="newUser.phone" class="form-control" id="phone">
-        <label for="email"> email </label>
+        <label for="email"> Email Address: </label>
         <input type="textarea" v-model="newUser.email" class="form-control" id="email">
-        <label for="address"> Address </label>
+        <label for="address"> Address: </label>
         <input type="textarea" v-model="newUser.address" class="form-control" id="address">
-        <label for="gender"> Gender </label>
+        <label for="gender"> Gender: </label>
         <input type="textarea" v-model="newUser.gender" class="form-control" id="gender">
-        <label for="startDate"> Start Date </label>
+        <label for="startDate"> Start Date: </label>
         <input type="textarea" v-model="newUser.startDate" class="form-control" id="startDate">
-        <label for="Position"> Position </label>
+        <label for="Position"> Position: </label>
         <input type="textarea" v-model="newUser.Position" class="form-control" id="Position">
     </div>
 
     <input type="submit" value="Add New Member" class="button">
   </form>
+  <br>
+
+  <h2> To Edit, click "Edit Member. To Delete, click "Delete Member"</h2>
 
   <input type="submit" value="Edit Member" class="button">
   <form action = "deleteUser.html">
