@@ -63,11 +63,7 @@
             <th scope="col">Certification Name</th>
             <th scope="col">Certification Agency</th>
             <th scope="col">Standard Expiration Period</th>
-
             <th scope="col">CertDescription</th>
-            <th>detail</th>
-
-            <th scope="col">Description</th>
             <th scope="col">Details</th>
           </tr>
 
@@ -85,12 +81,17 @@
             <td> {{ Cert.CertDescription }}</td>
             <th><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
               details</button></th>
-              <th><div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            <th>
+              <div class="collapse" id="collapseExample">
+                <div id="certdetail">
+                  <tr v-for='detail in certdetailList'>
+                  <td>{{ detail.Person_certID }}</td>
+                  <td>{{ detail.CertID }}</td>
+                  <td>{{ detail.EmployeeID }}</td>
+                </tr>
                 </div>
-              </div></th>
-
+              </div>
+            </th>
           </tr>
         </tbody>
       </table>
