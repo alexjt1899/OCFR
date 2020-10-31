@@ -6,11 +6,11 @@ require 'common.php';
 $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
-$sql = 'SELECT cp.Person_certID, c.CertName, CONCAT(p.firstName, lastName) as Name, c.CertLength + cp.CertDate as ExpDate FROM Certification c, Person_Certification cp, People p where  c.CertID = cp.certID AND cp.EmployeeID=p.EmployeeID Group by c.certID, cp.employeeID';
+$sql = "SELECT cp.Person_certID, c.CertName, CONCAT(p.firstName,' ', lastName) as Name, datediff(CURDATE(), cp.CertDate)-c.CertLength as ExpDate FROM Certification c, Person_Certification cp, People p  where  c.CertID = cp.certID AND cp.EmployeeID=p.EmployeeID AND datediff(CURDATE(), cp.CertDate)>=c.CertLength Group by c.certID, cp.employeeID";
 $vars = [];
 
 if (isset($_GET['Person_certID'])) {
-  $sql = 'SELECT cp.Person_certID, c.CertName, CONCAT(p.firstName, lastName) as Name, c.CertLength + cp.CertDate as ExpDate FROM Certification c, Person_Certification cp, People p where  c.CertID = cp.CertID AND cp.EmployeeID=p.EmployeeID AND Person_certID=? Group by c.CertID, cp.EmployeeID';
+  $sql = "SELECT cp.Person_certID, c.CertName, CONCAT(p.firstName,' ', lastName) as Name, datediff(CURDATE(), cp.CertDate)-c.CertLength as ExpDate  FROM Certification c, Person_Certification cp, People p  where  c.CertID = cp.certID AND cp.EmployeeID=p.EmployeeID AND datediff(CURDATE(), cp.CertDate)>=c.CertLength Group by c.certID, cp.employeeID";
   $vars = [ $_GET['Person_certID'] ];
 }
 
