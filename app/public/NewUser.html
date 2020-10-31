@@ -86,8 +86,8 @@
       </tr>
     </tbody>
   </table>
-<div>
 
+<div>
 <h2> To Add a New Member, Please fill in the form below and click "Add New Member"</h2>
   <form id="newUserForm" v-on:submit.prevent ="createUser()">
     <div class="userList">
@@ -111,15 +111,12 @@
         <input type="textarea" v-model="newUser.address" class="form-control" id="address">
         <label for="gender"> Gender: </label>
         <input type="textarea" v-model="newUser.gender" class="form-control" id="gender">
-<<<<<<< HEAD
         <label for="startDate"> Start Date </label>
         <input type="date" v-model="newUser.startDate" class="form-control" id="startDate">
         <label for="Position"> Position </label>
-=======
         <label for="startDate"> Start Date: </label>
         <input type="textarea" v-model="newUser.startDate" class="form-control" id="startDate">
         <label for="Position"> Position: </label>
->>>>>>> 418963108f186502efe2d6f9a7b03d206047b453
         <input type="textarea" v-model="newUser.Position" class="form-control" id="Position">
     </div>
 
