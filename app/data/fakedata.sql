@@ -50,12 +50,10 @@ create table Certification (
     CertRenewal VARCHAR(50),
   	CerAgency VARCHAR(50)
 );
-insert into Certification (CertID, CertName, CertDate,
-  CertExpiration, CertRenewal, CerAgency) values
-  ('81-5776079', 'Firefighter I (Athens Technical College)', '10/10/2019', 2, 'Yes', 'EchoStar Corporation');
-insert into Certification (CertID, CertName, CertDate,
-  CertExpiration, CertRenewal, CerAgency) values
-  ('94-5870183', 'CPR (CPR for the Professional Rescuer/American Red Cross)', '1/21/2017', 2, 'Yes', 'Putnam Managed Municipal Income Trust');
+insert into Certification (CertName, CertLength, CerAgency) values
+  ('Firefighter I (Athens Technical College)',  200, 'EchoStar Corporation');
+insert into Certification (CertName, CertLength, CerAgency) values
+  ('CPR (CPR for the Professional Rescuer/American Red Cross)', 365, 'Putnam Managed Municipal Income Trust');
 
 
 create table Person_Certification (
