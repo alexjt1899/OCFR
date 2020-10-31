@@ -6,22 +6,27 @@ require 'common.php';
 $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
-$sql = 'SELECT * FROM Person_Certification';
+$sql = "SELECT cp.Person_certID, p.EmployeeID,c.CertID,CONCAT(p.firstName,' ', lastName) as Name
+FROM Certification c, Person_Certification cp, People p
+where  c.CertID = cp.certID AND cp.EmployeeID=p.EmployeeID
+Group by c.certID, cp.employeeID";
 $vars = [];
 
-if (isset($_GET['Person_CertID'])) {
-  // This is an example of a parameterized query
-  $sql = 'SELECT * FROM Person_Certification WHERE Person_CertID = ?';
-  $vars = [ $_GET['Person_CertID'] ];
+if (isset($_GET['Person_certID'])) {
+  $sql = "SELECT cp.Person_certID, p.EmployeeID,c.CertID,CONCAT(p.firstName,' ', lastName) as Name
+  FROM Certification c, Person_Certification cp, People p
+  where  c.CertID = cp.certID AND cp.EmployeeID=p.EmployeeID
+  Group by c.certID, cp.employeeID";
+  $vars = [ $_GET['Person_certID'] ];
 }
 
 $stmt = $db->prepare($sql);
 $stmt->execute($vars);
 
-$users = $stmt->fetchAll();
+$Certification = $stmt->fetchAll();
 
 // Step 3: Convert to JSON
-$json = json_encode($users, JSON_PRETTY_PRINT);
+$json = json_encode($Certification, JSON_PRETTY_PRINT);
 
 // Step 4: Output
 header('Content-Type: application/json');
