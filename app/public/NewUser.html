@@ -52,7 +52,7 @@
     <h1 style="text-align:center">Welcome To Member List</h1>
 
 <div id="users">
-  <table id="userTable" class="table table-striped table-dark" >
+  <table id="userTable" class="table table-bordered" data-show-toggle="false">
     <thead>
       <tr>
         <th scope="col">Employee ID</th>
@@ -111,9 +111,15 @@
         <input type="textarea" v-model="newUser.address" class="form-control" id="address">
         <label for="gender"> Gender: </label>
         <input type="textarea" v-model="newUser.gender" class="form-control" id="gender">
+<<<<<<< HEAD
+        <label for="startDate"> Start Date </label>
+        <input type="date" v-model="newUser.startDate" class="form-control" id="startDate">
+        <label for="Position"> Position </label>
+=======
         <label for="startDate"> Start Date: </label>
         <input type="textarea" v-model="newUser.startDate" class="form-control" id="startDate">
         <label for="Position"> Position: </label>
+>>>>>>> 418963108f186502efe2d6f9a7b03d206047b453
         <input type="textarea" v-model="newUser.Position" class="form-control" id="Position">
     </div>
 
