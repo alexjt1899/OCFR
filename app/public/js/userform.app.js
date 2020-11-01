@@ -71,8 +71,9 @@ app = new Vue({
         lastName:""
       }
     }
-
   },
+    // https://stackoverflow.com/questions/15547198/export-html-table-to-csv this is taken from answer 2 on the page
+
   created() {
     this.fetchUser();
   }
