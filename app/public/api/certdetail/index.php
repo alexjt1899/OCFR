@@ -6,7 +6,7 @@ require 'common.php';
 $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
-$sql = "SELECT c.certID,  CONCAT(p.firstName,' ', lastName) as Name
+$sql = "SELECT c.certID as id,  CONCAT(p.firstName,' ', lastName) as Name
 FROM Certification c, Person_Certification cp, People p
 where  c.CertID = cp.certID AND cp.EmployeeID=p.EmployeeID
 Group by c.certID, cp.employeeID";

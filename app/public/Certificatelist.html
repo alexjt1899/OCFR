@@ -66,6 +66,10 @@
             <th scope="col">CertDescription</th>
             <th scope="col">Details</th>
           </tr>
+
+
+            </details>
+          </tr>
         </thead>
 
         <tbody class="text-center">
@@ -75,19 +79,20 @@
             <td> {{ Cert.CerAgency }}</td>
             <td> {{ Cert.CertLength }}</td>
             <td> {{ Cert.CertDescription }}</td>
-          <!-- toggle bar modified from  https://getbootstrap.com/docs/4.0/components/collapse/ -->
             <td><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
               details</button></td>
             <td>
               <div class="collapse" id="collapseExample">
-                <div id="certdetail">
+
                   <ul>
                     <li v-for="Detail in certdetailList">
-                        {{ Detail.Name }}
+                      <div v-if='Cert.CertID === Detail.id'>
+                        {{Detail.Name}}
+                      </div>
                     </li>
                   </ul>
                 </tr>
-                </div>
+
               </div>
             </td>
           </tr>

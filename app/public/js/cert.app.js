@@ -16,12 +16,20 @@ var randomCert = new Vue({
         CertDescription:""
       },
 
-      certdetailList: [{
-        ID:''
+    certdetailList: [{
+         CertID:'',
         Name:''
-
-      }]
+     }],
+     RowSelector: 12
     },
+
+    computed: {
+     SelectedCertification: function() {
+       return this.certdetailList.filter(function(u) {
+         return u.DetailFilter;
+
+     })
+   }},
 
     created() {
       this.fetchCertificate();
@@ -30,9 +38,12 @@ var randomCert = new Vue({
 
    methods:{
 
-     DoQueryStuff() {
-       
-     }
+
+ DetailFilter() {
+this.RowSelector== this.certdetailsList.CertID;
+
+},
+
 
      newCertificationData() {
        return {
@@ -73,6 +84,7 @@ var randomCert = new Vue({
         .then(response => response.json())
         .then(json => {
           this.certdetailList=json;
+          console.log('Detail List:')
           console.log(this.certdetailList);
         });
       }
