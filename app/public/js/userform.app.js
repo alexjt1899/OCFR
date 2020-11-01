@@ -30,7 +30,13 @@ app = new Vue({
     	startDate:'',
     	Position:'',
     	CertExpiration:''
-    }
+    },
+
+    userdetailList: [{
+            id:'',
+            Name:''
+
+    }]
   },
 
   methods:{
@@ -70,11 +76,24 @@ app = new Vue({
         firstName: "",
         lastName:""
       }
+    },
+
+    fetchUserdetail(){
+      fetch('api/userdetail/index.php')
+      .then(response => response.json())
+      .then(json => {
+        this.userdetailList=json;
+        console.log('Detail List:')
+        console.log(this.userdetailList);
+
+      });
     }
+
   },
     // https://stackoverflow.com/questions/15547198/export-html-table-to-csv this is taken from answer 2 on the page
 
   created() {
     this.fetchUser();
+    this.fetchUserdetail();
   }
 });
