@@ -6,17 +6,17 @@ require 'common.php';
 $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
-$sql = "SELECT cp.Person_certID, c.CertName,p.EmployeeID
+$sql = "SELECT p.EmployeeID as id,  c.CertName as Name
 FROM Certification c, Person_Certification cp, People p
 where  c.CertID = cp.certID AND cp.EmployeeID=p.EmployeeID
-Group by c.certID, cp.employeeID";
+Group by p.EmployeeID, c.CertID";
 $vars = [];
 
 if (isset($_GET['Person_certID'])) {
-  $sql = "SELECT cp.Person_certID, c.CertName,p.EmployeeID
-FROM Certification c, Person_Certification cp, People p
-where  c.CertID = cp.certID AND cp.EmployeeID=p.EmployeeID
-Group by c.certID, cp.employeeID";
+  $sql = "SELECT p.EmployeeID as id,  c.CertName as Name
+  FROM Certification c, Person_Certification cp, People p
+  where  c.CertID = cp.certID AND cp.EmployeeID=p.EmployeeID
+  Group by p.EmployeeID, c.CertID";
   $vars = [ $_GET['Person_certID'] ];
 }
 

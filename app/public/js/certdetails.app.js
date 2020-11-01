@@ -1,25 +1,25 @@
-var certdetail = new Vue({
-  el: "#certdetail",
-   data:{
-    certdetailList: [{
-      Name:''
-    }]
-    },
+//var certdetail = new Vue({
+//  el: "#certdetail",
+//   data:{
+//    certdetailList: [{
+  //    Name:''
+  //  }]
+  //  },
 
-    created() {
-      this.fetchCertdetail();
-    },
+//    created() {
+//      this.fetchCertdetail();
+//    },
 
-   methods:{
+//   methods:{
 
 
-    fetchCertdetail(){
-      fetch('api/certdetail/index.php')
-      .then(response => response.json())
-      .then(json => {
-        this.certdetailList=json;
-        console.log(this.certdetailList);
-      });
-    }
-    },
-});
+//    fetchCertdetail(){
+  //    fetch('api/certdetail/index.php')
+    //  .then(response => response.json())
+      //.then(json => {
+    //    this.certdetailList=json;
+    //    console.log(this.certdetailList);
+  //    });
+//    }
+  //  },
+//});

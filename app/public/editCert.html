@@ -55,7 +55,7 @@
     <h1 style="text-align:center">
       Update Certification List
     </h1>
-    <div id="randomCert">
+    <div id="EditCert">
       <table class="table table-bordered">
         <thead>
           <tr>
@@ -77,22 +77,33 @@
         </tbody>
       </table>
 
+      <form v-on:submit.prevent="printID()">
+        <button>Test</button>
+      </form>
+
         <form v-on:submit.prevent ="editCertification()">
           <div class="col">
-            <label for="CertID">CertID</label>
-            <input type="text" v-model="newCertification.CertID" class="form-control" id="CertID" placeholder="00-0000000">
+      <  <label>Select CertID</label>
+            <select v-model="SelectedID">
+                  <option v-for= "Cert in certList" :key="Cert.CertID">
+                      {{ Cert.CertID }}
+                   </option>
+
+
+            </select>
+
 
             <label for="CertName">CertName</label>
-            <input type="text" v-model="newCertification.CertName" class="form-control" id="CertName" placeholder="CPR">
+            <input type="text" v-model="EditedCert.CertName" class="form-control" id="CertName" placeholder="CPR">
 
             <label for="CerAgency">CerAgency</label>
-            <input type="text" v-model="newCertification.CerAgency" class="form-control" id="CerAgency">
+            <input type="text" v-model="EditedCert.CerAgency" class="form-control" id="CerAgency">
 
-            <label for="CertLength">CertLength</label>
-            <input type="text" v-model="newCertification.CertLength" class="form-control" id="CertLength">
+            <label for="CertLength">CertLength (Days)</label>
+            <input type="number" v-model="EditedCert.CertLength" class="form-control" id="CertLength">
 
             <label for="CertDescription">CertDescription</label>
-            <input type="text" v-model="newCertification.CertDescription" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
+            <input type="text" v-model="EditedCert.CertDescription" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
             <div id="success"></div>
             <button class="btn btn-primary btn-xl text-uppercase" onclick="success()" id="submit" type="submit">Edit Certifcation</button>
           </div>
