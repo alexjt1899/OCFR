@@ -67,6 +67,7 @@
         <th scope="col">Gender</th>
         <th scope="col">Start Date</th>
         <th scope="col">Email Address</th>
+        <th scope="col">Details</th>
       </tr>
     </thead>
     <tbody id="userTableBody">
@@ -83,6 +84,20 @@
         <td> {{USER.gender}}</td>
         <td> {{USER.startDate}}</td>
         <td> {{USER.email}}</td>
+        <td><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          details</button></td>
+        <td>
+          <div class="collapse" id="collapseExample">
+              <ul>
+                <li v-for="Detail in userdetailList">
+                  <div v-if='Cert.CertID === Detail.id'>
+                    {{Detail.Name}}
+                  </div>
+                </li>
+              </ul>
+            </tr>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -132,58 +147,6 @@
 </div>
 </div>
 </body>
-
-<!-- <div>
-  <form action="/post.php">
-    <label for="fname">Employee ID</label>
-    <input type="text" id="EmployeeID" name="firstname">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="name..">
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="last name..">
-
-	<label for="rnumber">Radio Number</label>
-    <input type="text" id="radioNumber" name="lastname" placeholder="">
-
-<label for="Station">Station</label>
-      <select id="StationNum" name="StationNum">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
-  <label for="fname">Certification Expiration Date</label>
-  <input type="text" id="CertExpiration" name="firstname">
-	<label for="address">address</label>
-    <input type="text" id="address" name="lastname" placeholder="">
-
-	<label for="phone">Phone</label>
-    <input type="text" id="phone" name="lastname" placeholder="">
-
-	<label for="email">Email</label>
-    <input type="text" id="email" name="lastname" placeholder="">
-
-	<label for="gender">Gender</label>
-    <input type="text" id="gender" name="gender" placeholder="">
-
-
-    <label for="position">Position</label>
-    <select id="pos" name="empos">
-      <option value="Chief">Chief</option>
-      <option value="battalion chief">Battalion Cheif</option>
-      <option value="Technician">Technician</option>
-    </select>
-
-	<label for="active">Active?</label>
-    <select id="active" name="active">
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-    </select>
-
-  	<label for= "sdate">Start Date</label>
-    <input type="datetime" id="sdate" name="startdate" placeholder="">
-    <input type="submit" value="Create New User">
-  </form>
-</div> -->
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
