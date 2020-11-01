@@ -105,16 +105,18 @@
             <label for="CertDescription">CertDescription</label>
             <input type="text" v-model="EditedCert.CertDescription" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
             <div id="success"></div>
-            <button class="btn btn-primary btn-xl text-uppercase" onclick="success()" id="submit" type="submit">Edit Certifcation</button>
+            <button type="submit" class="btn btn-primary btn-xl text-uppercase"  id="submit" type="submit">Edit Certification</button>
           </div>
-        </form>
-      </div>
+        </form> <!-- onclick="success()" -->
+
 
       <form method="post" action="Certificatelist.html" id="certificates" name="certificates" novalidate="novalidate">
         <div class="text-center">
             <div id="success"></div>
             <button class="btn btn-primary btn-xl text-uppercase" id="certificates" type="submit">Return</button>
         </div>
+
+          </div>
       </form>
   </body>
 

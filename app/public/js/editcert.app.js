@@ -25,7 +25,7 @@ var randomCert = new Vue({
       CertDescription: ""
     },
 
-SelectedID: "12"
+SelectedID: ""
 
   },
   methods: {
@@ -55,7 +55,8 @@ SelectedID: "12"
         })
         .then( response => response.text() )
 
-        console.log(this.EditedCert)
+        console.log(this.EditedCert);
+        this.fetchCertificate();
 
     //    this.handleData();
       },
@@ -73,7 +74,7 @@ SelectedID: "12"
   }
 });
 
-function success() {
-  alert("Click OK if you want to edit the certification");
-  window.location.href = "Certificatelist.html";
-}
+//function success() {
+  //alert("Click OK if you want to edit the certification");
+//  window.location.href = "Certificatelist.html";
+//}
