@@ -79,10 +79,9 @@
     </div>
 
 <div>
-  <h6>Please Click Here to Download</h6>
-    <form method="get" action="file.doc">
-        <button type="submit">Download</button>
-    </form>
+  <h5>Click the button to download the report as CSV:</h5>
+<!-- Reference:https://www.codexworld.com/export-html-table-data-to-csv-using-javascript/#:~:text=JavaScript%20Code&text=The%20downloadCSV()%20function%20takes,data%20in%20a%20CSV%20file.&text=The%20exportTableToCSV()%20function%20creates,using%20the%20downloadCSV()%20function. -->
+<button onclick="exportTableToCSV('Expired_Certifications.csv')">Download the Expired Certifications Report</button>
 </div>
 </div>
 
@@ -98,8 +97,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src=“assets/js/bootstrap-dropdown.js” type=“text/javascript”></script>
     <script src="js/expcert.app.js"></script>
+    <script src = js/csv.js> </script>
 
-    <!-- The following script if for the filter bar at the top of the page. Source: http://localhost:8080/ExpiredCertificationsReport.html -->
+    <!-- The following script is for the filter bar at the top of the page. Source: http://localhost:8080/ExpiredCertificationsReport.html -->
     <script>
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
