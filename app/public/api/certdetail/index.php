@@ -13,7 +13,7 @@ Group by c.certID, cp.employeeID";
 $vars = [];
 
 if (isset($_GET['Person_certID'])) {
-  $sql = "SELECT cp.Person_certID, p.EmployeeID,c.CertID,CONCAT(p.firstName,' ', lastName) as Name
+  $sql = "SELECT cp.Person_certID, p.EmployeeID,c.CertID,CONCAT(p.firstName,' ', p.lastName) as Name
   FROM Certification c, Person_Certification cp, People p
   where  c.CertID = cp.certID AND cp.EmployeeID=p.EmployeeID
   Group by c.certID, cp.employeeID";
