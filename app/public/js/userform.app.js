@@ -87,6 +87,7 @@ app = new Vue({
       console.log(this.newUser);
       this.fetchUser();
     },
+
     newUserData() {
       return {
         EmployeeID: "",
@@ -102,7 +103,6 @@ app = new Vue({
         this.userdetailList=json;
         console.log('Detail List:')
         console.log(this.userdetailList);
-
       });
     },
 
