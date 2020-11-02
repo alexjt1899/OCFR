@@ -1,31 +1,43 @@
-var randomCert = new Vue({
-  el: '#randomCert',
+var app = new Vue({
+  el: '#DeleteCert',
   data: {
     certList: [],
-    certification: {}
+    certification: {},
+
+    activecert:{
+      CertID:"",
+      CertName:"",
+      CerAgency:"",
+      CertLength:"",
+      CertDescription:""
+    }
   },
+
+
+
   methods: {
     fetchCertificate() {
       fetch('api/Certification/index.php')
       .then(response => response.json())
-      .then(json => { randomCert.certList = json })
+      .then(json => {this.certList = json })
     },
 
     deleteCertification() {
       fetch('api/Certification/delete.php', {
         method:'POST',
-        body: JSON.stringify(this.certification),
+        body: JSON.stringify(this.activecert),
         headers:{
           "Content-Type": "application/json; charset=utf-8"
         }
         })
         .then( response => response.text() )
-
         this.handleData();
+        console.log("Fetching...");
+        this.fetchCertificate();
       },
 
       handleData() {
-        this.certification = {
+        this.activecert = {
           CertID: ""
         }
       }

@@ -51,7 +51,7 @@
 
 <section class="container-fluid" >
     <h1 style="text-align:center">  Welcome To CertificatesList</h1>
-    <div id="randomCert">
+    <div id="DeleteCert">
       <table class="table table-bordered">
         <thead>
           <tr>
@@ -63,7 +63,7 @@
           </tr> -->
         </thead>
         <tbody class="text-center">
-          <tr v-for="Cert in certList">
+          <tr v-for="Cert in certList" v-on:click="activecert = Cert">
             <td> {{ Cert.CertID }}</td>
             <td> {{ Cert.CertName }}</td>
             <!--<td> {{ Cert.CerAgency }}</td>
@@ -73,12 +73,12 @@
         </tbody>
       </table>
 
-      <form v-on:submit.prevent ="deleteCertification()">
+      <form v-on:submit.prevent ="deleteCertification()" >
         <div class="col">
           <label for="CertID">CertID</label>
-          <input type="text" v-model="certification.CertID" class="form-control" id="CertID" placeholder="00">
+          <input type="text" v-model="activecert.CertID" class="form-control" id="CertID" readonly>
           <div id="success"></div>
-          <button class="btn btn-primary btn-xl text-uppercase" onclick="success()" id="submit" type="submit">Delete Certifcation</button>
+          <button class="btn btn-primary btn-xl text-uppercase"  id="submit" type="submit">Delete Certifcation</button>
         </div>
       </form>
     </div>
@@ -86,7 +86,7 @@
     <form method="post" action="Certificatelist.html" id="certificates" name="certificates" novalidate="novalidate">
       <div class="col">
           <div id="success"></div>
-          <button class="btn btn-primary btn-xl text-uppercase" id="certificates" type="submit">Return</button>
+          <button class="btn btn-primary btn-xl text-uppercase" id="success" type="submit">Return</button>
       </div>
     </form>
   </body>
