@@ -14,14 +14,7 @@ margin-top: 6px;
 font-family: serif;
 background-color: darkred;
 color: white;
-}
-
-h2{
-    margin-bottom: 4px;
-    margin-top: 6px;
-    background-color: darkred;
-    color: white;
-    font-family: serif;
+text-align: center;
 }
 
 nav {
