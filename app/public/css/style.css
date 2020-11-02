@@ -39,7 +39,13 @@ font-size: 14px;
     padding: 30px;
 }
 
-
+#success{
+  color: darkred;
+  text-decoration: none;
+}
+label{
+ font-weight: bold;
+}
 footer{
 background-color: green;
 color: white;
