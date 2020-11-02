@@ -1,7 +1,7 @@
 var randomUser = new Vue({
-  el: '#randomUser',
+  el: '#EditUser',
   data: {
-    member: [{
+    userList: [{
       EmployeeID: "",
       firstName: "",
       lastName: "",
@@ -15,7 +15,7 @@ var randomUser = new Vue({
       startDate: "",
       Position: ""
     }],
-    members: {
+    User: {
       EmployeeID: "",
       firstName: "",
       lastName: "",
@@ -50,7 +50,7 @@ var randomUser = new Vue({
       activeisActive() {
         return this.activeUser ? this.activeUser.isActive: ''
       },
-      activephone()) {
+      activephone() {
         return this.activeUser ? this.activeUser.phone: ''
       },
       activeemail() {
@@ -78,7 +78,7 @@ var randomUser = new Vue({
       handleEditUserForm() {
         fetch('api/user/updateuser.php', {
           method:'POST',
-          body: JSON.stringify(this.members),
+          body: JSON.stringify(this.User),
           headers: {
             "Content-Type": "application/json; charset=utf-8"
           }
@@ -89,7 +89,7 @@ var randomUser = new Vue({
         this.handleData();
       },
         handleData() {
-          this.members = {
+          this.User = {
             EmployeeID: ""
           }
         }
@@ -104,7 +104,7 @@ var randomUser = new Vue({
         handleUpdateMemberForm() {
           fetch('api/members/updatemembers.php', {
             method:'POST',
-            body: JSON.stringify(this.members),
+            body: JSON.stringify(this.User),
             headers: {
               "Content-Type": "application/json; charset=utf-8"
             }
@@ -114,8 +114,8 @@ var randomUser = new Vue({
           this.handleData();
         },
           handleData() {
-            this.members = {
-              memberID: ""
+            this.User = {
+              EmployeeID: ""
             }
           }
       },
