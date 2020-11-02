@@ -14,14 +14,7 @@ margin-top: 6px;
 font-family: serif;
 background-color: darkred;
 color: white;
-}
-
-h2{
-    margin-bottom: 4px;
-    margin-top: 6px;
-    background-color: darkred;
-    color: white;
-    font-family: serif;
+text-align: center;
 }
 
 nav {
@@ -46,7 +39,13 @@ font-size: 14px;
     padding: 30px;
 }
 
-
+#success{
+  color: darkred;
+  text-decoration: none;
+}
+label{
+ font-weight: bold;
+}
 footer{
 background-color: green;
 color: white;
