@@ -29,17 +29,17 @@ nav {
 padding: 8px;
  font-family: sans-serif;
  font-weight: bold;
-align-content: center;
+/* align-content: center;
 text-align-last: center;
-text-align: center;
+text-align: center; */
 }
-            a{
-            color: darkred;
-            text-decoration: none;
-            }
-            a:hover{
-                color: firebrick;
-            }
+a{
+color: darkred;
+text-decoration: none;
+}
+a:hover{
+    color: firebrick;
+}
 main{
 font-family: sans-serif;
 font-size: 14px;
@@ -56,10 +56,10 @@ padding: 10px;
 font-size: 10px;
 }
 
-.nav-link{
+/* .nav-link{
   background-color: gray;
   padding: 10px;
-}
+} */
 
 input[type=text], select {
   width: 100%;
@@ -96,3 +96,17 @@ myInput {
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
 }
+
+.login-heading {
+  font-weight: 300;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+  border-radius: 2rem;
+}
+
+form{
+align-self: center;}
