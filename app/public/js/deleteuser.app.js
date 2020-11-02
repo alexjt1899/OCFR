@@ -24,7 +24,7 @@ var randomUser = new Vue({
         .then( response => response.text() )
 
         this.handleData();
-        fetchUser();
+        this.fetchUser();
       },
 
       handleData() {
