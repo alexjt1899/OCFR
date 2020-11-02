@@ -128,10 +128,7 @@
         <input type="textarea" v-model="newUser.gender" class="form-control" id="gender">
         <label for="startDate"> Start Date </label>
         <input type="date" v-model="newUser.startDate" class="form-control" id="startDate">
-        <label for="Position"> Position </label>
-        <label for="startDate"> Start Date: </label>
-        <input type="textarea" v-model="newUser.startDate" class="form-control" id="startDate">
-        <label for="Position"> Position: </label>
+                <label for="Position"> Position: </label>
         <input type="textarea" v-model="newUser.Position" class="form-control" id="Position">
     </div>
 
@@ -140,10 +137,12 @@
   <br>
 
   <h2> To Edit, click "Edit Member. To Delete, click "Delete Member"</h2>
-
+<form action="editUser.html">
   <input type="submit" value="Edit Member" class="button">
+</form>
   <form action = "deleteUser.html">
     <input type="submit" value="Delete Member" class="button">
+  </form>
 </div>
 </div>
 </body>

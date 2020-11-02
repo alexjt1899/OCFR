@@ -36,9 +36,26 @@ app = new Vue({
             id:'',
             Name:''
 
-    }]
-  },
 
+
+    }],
+
+    activeUser:{
+      EmployeeID: '',
+      firstName: '',
+      lastName:'',
+      radioNumber:'',
+    	stationNumber:'',
+    	isActive:'',
+    	phone:'',
+    	email:'',
+    	address:'',
+    	gender:'',
+    	startDate:'',
+    	Position:'',
+    	CertExpiration:''
+  }
+},
   methods:{
     fetchUser(){
       fetch('api/user/get.php')
@@ -86,6 +103,20 @@ app = new Vue({
         console.log('Detail List:')
         console.log(this.userdetailList);
 
+      });
+    },
+
+    updateUser( evt ){
+      fetch('api/user/updateuser.php', {
+        method: 'POST',
+        body: JSON.stringify(this.activeUser),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        }
+      })
+      .then( response => response.json() )
+      .then( json => {
+        console.log("Returned from post:", json);
       });
     }
 

@@ -1,8 +1,10 @@
 var randomUser = new Vue({
-  el: '#randomUser',
+  el: '#DeleteUser',
   data: {
     usersList: [],
-    user: {}
+    user: {},
+
+    activeUser: {}
   },
   methods: {
     fetchUser() {

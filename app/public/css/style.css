@@ -110,3 +110,10 @@ myInput {
 
 form{
 align-self: center;}
+
+. highlight {
+     background-color: red;
+}
+tr:hover{
+     cursor: pointer;
+}
