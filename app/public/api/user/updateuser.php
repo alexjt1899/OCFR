@@ -29,4 +29,4 @@ $stmt->execute([
 
 header('HTTP/1.1 303 See Other');
 header('Content-Type: application/json');
-header('Location: ../People');
+header('Location: ../user/get.php');
