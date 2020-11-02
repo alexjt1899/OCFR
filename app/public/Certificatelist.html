@@ -91,29 +91,29 @@
       </table>
 
 <br>
-    <h2 > To Add a New Certification, Please fill in the form below and click "Add New Certification"</h2>
+    <h1> To Add a New Certification, Please fill in the form below and click "Add New Certification"</h1>
         <form v-on:submit.prevent ="createCertification()" >
           <div class="certifications">
             <!--<label for="CertID">CertID</label>
             <input type="text" v-model="newCertification.CertID" class="form-control" id="CertID" placeholder="00-0000000"> -->
 
-            <label for="CertName">CertName</label>
+            <label for="CertName">Certification Name:</label>
             <input type="text" v-model="newCertification.CertName" class="form-control" id="CertName" placeholder="CPR">
 
-            <label for="CerAgency">CerAgency</label>
+            <label for="CerAgency">Certification Agency:</label>
             <input type="text" v-model="newCertification.CerAgency" class="form-control" id="CerAgency">
 
-            <label for="CertLength">Standard Expiration Period</label>
+            <label for="CertLength">Standard Expiration Period:</label>
             <input type="text" v-model="newCertification.CertLength" class="form-control" id="CertLength">
 
-            <label for="CertDescription">CertDescription</label>
+            <label for="CertDescription">Certification Description:</label>
             <input type="text" v-model="newCertification.CertDescription" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
           </div>
           <input type="submit" value="Add New Certification" class="button">
         </form>
-<br>
+<br><br><br>
 
-<h2> To Edit, click "Edit Certification. To Delete, click "Delete Certification"</h2>
+<h1> To Edit, click "Edit Certification. To Delete, click "Delete Certification"</h1>
         <form action = "editCert.html">
         <input type="submit" value="Edit Certification" class="button">
       </form>

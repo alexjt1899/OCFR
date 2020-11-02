@@ -50,7 +50,7 @@
       </nav>
 
 <section class="container-fluid" >
-    <h1 style="text-align:center">  Welcome To Certification List</h1>
+    <h1>  List of Certifications</h1>
     <div id="randomCert">
       <table class="table table-bordered">
         <thead>
@@ -72,12 +72,13 @@
           </tr>
         </tbody>
       </table>
-<br>
+<br><br>
+<h1>Please Put Certification ID that you would like to delete</h1>
       <form v-on:submit.prevent ="deleteCertification()">
         <div class="col">
           <strong><label for="CertID">Certification ID: </label></strong>
           <input type="text" v-model="certification.CertID" class="form-control" id="CertID" placeholder="00">
-          <div id="success"></div>
+          <div id="success"></div><br>
           <button class="btn btn-primary btn-xl text-uppercase" onclick="success()" id="submit" type="submit">Delete</button>
         </div>
       </form>

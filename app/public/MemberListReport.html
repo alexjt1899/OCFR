@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head>
+<head class="container-fluid">
     <title>OCFR</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -18,7 +18,7 @@
       </div>
     </header>
    <!-- nav bar modified from https://getbootstrap.com/docs/4.5/components/navbar/-->
-   <nav>
+   <nav class="container-fluid">
      <ul class="navbar-nav">
        <li class="nav-item">
          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
@@ -47,7 +47,7 @@
          </li>
        </ul>
      </nav>
-
+<section class="container-fluid">
 <h1 style="text-align:center">Member List Report</h1>
 <div id="users">
   <table id="userTable" class="table table-bordered" data-show-toggle="false">
@@ -85,12 +85,21 @@
     </tbody>
   </table>
 </div>
-
+<br><br>
 <h5>Click the button to download the report as CSV:</h5>
 <!-- Reference:https://www.codexworld.com/export-html-table-data-to-csv-using-javascript/#:~:text=JavaScript%20Code&text=The%20downloadCSV()%20function%20takes,data%20in%20a%20CSV%20file.&text=The%20exportTableToCSV()%20function%20creates,using%20the%20downloadCSV()%20function. -->
-<button onclick="exportTableToCSV('MemberList.csv')">Download the Member Report</button>
+<button onclick="exportTableToCSV('MemberList.csv')">Download</button>
 
-</body>
+</body></section>
+  <br><br><br>
+  <footer class="container-fluid">
+      Contact Us | 2633 Camino Ramon, Suite 500 Oconee County, GA 94583|
+      <br>
+      Ph: (925) 659-3200 Ph: (888) 722-2352 Fax: (925) 659-3201|
+      <br>
+      Copyright © 2020 The Trustees of OCFR, Copyright Complaints
+  </footer>
+
 
 <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
