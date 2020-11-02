@@ -108,7 +108,6 @@ myInput {
   border-radius: 2rem;
 }
 
-
 form{
 align-self: center;}
 
@@ -117,4 +116,9 @@ align-self: center;}
 }
 tr:hover{
      cursor: pointer;
+}
+
+#profile{
+  max-width:100%;
+  border-radius: 10px;
 }
