@@ -55,7 +55,7 @@
     <h1 style="text-align:center">
       Update Certification List
     </h1>
-    <div id="EditCert">
+    <div id="randomCert">
       <table class="table table-bordered">
         <thead>
           <tr>
@@ -67,7 +67,7 @@
           </tr>
         </thead>
         <tbody class="text-center">
-          <tr v-for="Cert in certList">
+          <tr v-for="Cert in certList" v-on:click="activecert = Cert">
             <td> {{ Cert.CertID }}</td>
             <td> {{ Cert.CertName }}</td>
             <td> {{ Cert.CerAgency }}</td>
@@ -77,37 +77,29 @@
         </tbody>
       </table>
 
-      <form v-on:submit.prevent="printID()">
-        <button>Test</button>
+      <form method="post">
+        <h2>Update a Certificate</h2>
+        <div>
+        <label for="certname">Certification Name</label>
+        <input class="form-control" v-model="activecert.CertName">
+        </div>
+
+        <div>
+        <label for="CerAgency">Certificate Agency</label>
+        <input class="form-control" v-model="activecert.CerAgency">
+        </div>
+
+        <div>
+        <label for="CertLength">Certificate Length</label>
+        <input class="form-control" v-model="activecert.CertLength">
+        </div>
+
+        <div>
+        <label for="CertDescription">Certification Description</label>
+        <input class="form-control" v-model="activecert.CertDescription">
+        </div>
+        <button type="submit" v-on:click.prevent="updateCert()">Update Certification</button>
       </form>
-
-        <form v-on:submit.prevent ="editCertification()">
-          <div class="col">
-      <  <label>Select CertID</label>
-            <select v-model="SelectedID">
-                  <option v-for= "Cert in certList" :key="Cert.CertID">
-                      {{ Cert.CertID }}
-                   </option>
-
-
-            </select>
-
-
-            <label for="CertName">CertName</label>
-            <input type="text" v-model="EditedCert.CertName" class="form-control" id="CertName" placeholder="CPR">
-
-            <label for="CerAgency">CerAgency</label>
-            <input type="text" v-model="EditedCert.CerAgency" class="form-control" id="CerAgency">
-
-            <label for="CertLength">CertLength (Days)</label>
-            <input type="number" v-model="EditedCert.CertLength" class="form-control" id="CertLength">
-
-            <label for="CertDescription">CertDescription</label>
-            <input type="text" v-model="EditedCert.CertDescription" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
-            <div id="success"></div>
-            <button class="btn btn-primary btn-xl text-uppercase" onclick="success()" id="submit" type="submit">Edit Certifcation</button>
-          </div>
-        </form>
       </div>
 
       <form method="post" action="Certificatelist.html" id="certificates" name="certificates" novalidate="novalidate">
@@ -124,7 +116,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src=“assets/js/bootstrap-dropdown.js” type=“text/javascript”></script>
-  <script src="js/editcert.app.js"></script>
+  <script src="js/cert.app.js"></script>
 
 </html>
 <!-- //type="application/javascript"

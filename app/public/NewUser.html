@@ -89,11 +89,11 @@
         <td>
           <div class="collapse" id="collapseExample">
               <ul>
-                <li v-for="Detail in userdetailList">
+                <span v-for="Detail in userdetailList">
                   <div v-if='USER.EmployeeID === Detail.id'>
                     {{Detail.Name}}
                   </div>
-                </li>
+                </span>
               </ul>
             </tr>
           </div>

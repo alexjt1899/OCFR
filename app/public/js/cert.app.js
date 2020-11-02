@@ -15,6 +15,13 @@ var randomCert = new Vue({
         CertLength:"",
         CertDescription:""
       },
+      activecert:{
+        CertID:"",
+        CertName:"",
+        CerAgency:"",
+        CertLength:"",
+        CertDescription:""
+      },
 
     certdetailList: [{
          CertID:'',
@@ -86,6 +93,19 @@ this.RowSelector== this.certdetailsList.CertID;
           this.certdetailList=json;
           console.log('Detail List:')
           console.log(this.certdetailList);
+        });
+      },
+      updateCert( evt ){
+        fetch('api/Certification/edit.php', {
+          method: 'POST',
+          body: JSON.stringify(this.activecert),
+          headers: {
+            "Content-Type": "application/json; charset=utf-8"
+          }
+        })
+        .then( response => response.json() )
+        .then( json => {
+          console.log("Returned from post:", json);
         });
       }
 

@@ -66,10 +66,6 @@
             <th scope="col">CertDescription</th>
             <th scope="col">Details</th>
           </tr>
-
-
-            </details>
-          </tr>
         </thead>
 
         <tbody class="text-center">
@@ -83,7 +79,6 @@
               details</button></td>
             <td>
               <div class="collapse" id="collapseExample">
-
                   <ul>
                     <li v-for="Detail in certdetailList">
                       <div v-if='Cert.CertID === Detail.id'>
@@ -91,8 +86,6 @@
                       </div>
                     </li>
                   </ul>
-                </tr>
-
               </div>
             </td>
           </tr>
@@ -125,11 +118,11 @@
         <form action = "editCert.html">
         <input type="submit" value="Edit Certification" class="button">
       </form>
+
         <form action = "deleteCert.html">
         <input type="submit" value="Delete Certification" class="button">
-</form></form>
+      </form>
       </div>
-    </div>
   </body>
 
   <!-- development version, includes helpful console warnings -->

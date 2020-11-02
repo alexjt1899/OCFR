@@ -78,7 +78,7 @@
       <form v-on:submit.prevent ="deleteCertification()">
         <div class="col">
           <label for="CertID">CertID</label>
-          <input type="text" v-model="certification.CertID" class="form-control" id="CertID" placeholder="00-0000000">
+          <input type="text" v-model="certification.CertID" class="form-control" id="CertID" placeholder="00">
           <div id="success"></div>
           <button class="btn btn-primary btn-xl text-uppercase" onclick="success()" id="submit" type="submit">Delete Certifcation</button>
         </div>
