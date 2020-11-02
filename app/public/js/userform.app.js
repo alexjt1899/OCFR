@@ -13,8 +13,7 @@ app = new Vue({
     	address:'',
     	gender:'',
     	startDate:'',
-    	Position:'',
-    	CertExpiration:''
+    	Position:''
     }],
     newUser: {
       EmployeeID: '',
@@ -28,16 +27,12 @@ app = new Vue({
     	address:'',
     	gender:'',
     	startDate:'',
-    	Position:'',
-    	CertExpiration:''
+    	Position:''
     },
 
     userdetailList: [{
             id:'',
             Name:''
-
-
-
     }],
 
     activeUser:{
@@ -52,8 +47,7 @@ app = new Vue({
     	address:'',
     	gender:'',
     	startDate:'',
-    	Position:'',
-    	CertExpiration:''
+    	Position:''
   }
 },
   methods:{

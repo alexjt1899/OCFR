@@ -11,7 +11,6 @@ $stmt = $db->prepare(
 );
 
 $stmt->execute([
-  $_POST['EmployeeID'],
   $_POST['firstName'],
   $_POST['lastName'],
   $_POST['radioNumber'],
@@ -22,12 +21,13 @@ $stmt->execute([
   $_POST['address'],
   $_POST['gender'],
   $_POST['startDate'],
-  $_POST['Position']
+  $_POST['Position'],
+  $_POST['EmployeeID']
 ]);
 
 // $memberId = $db->lastInsertID();
+$pk = $db->lastInsertId();
 
 header('HTTP/1.1 303 See Other');
-
-header('Location: ../user/');
-?>
+header('Content-Type: application/json');
+header('Location: ../user/?EmployeeID=' . $pk);
