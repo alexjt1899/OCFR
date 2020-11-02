@@ -77,14 +77,19 @@
               details</button></td>
             <td>
               <div class="collapse" id="collapseExample">
-                  <ul>
-                    <li v-for="Detail in certdetailList">
+               <ul>
+                  <div v-for="Detail in certdetailList">
                       <div v-if='Cert.CertID === Detail.id'>
-                        {{Detail.Name}}
-                      </div>
-                    </li>
-                  </ul>
-              </div>
+                        <li>
+                          {{Detail.Name}}
+                      </li>
+                  </div>
+                    <div v-else>
+                    
+                    </div>
+                </div>
+               </ul>
+
             </td>
           </tr>
         </tbody>
