@@ -14,7 +14,6 @@ app = new Vue({
     	gender:'',
     	startDate:'',
     	Position:'',
-    	CertExpiration:''
     }],
     newUser: {
       EmployeeID: '',
@@ -29,7 +28,6 @@ app = new Vue({
     	gender:'',
     	startDate:'',
     	Position:'',
-    	CertExpiration:''
     },
 
     userdetailList: [{
@@ -53,7 +51,6 @@ app = new Vue({
     	gender:'',
     	startDate:'',
     	Position:'',
-    	CertExpiration:''
   }
 },
   methods:{
@@ -107,6 +104,7 @@ app = new Vue({
     },
 
     updateUser( evt ){
+      console.log(this.activeUser);
       fetch('api/user/updateuser.php', {
         method: 'POST',
         body: JSON.stringify(this.activeUser),
@@ -119,6 +117,8 @@ app = new Vue({
         console.log("Returned from post:", json);
       });
     }
+
+
 
   },
     // https://stackoverflow.com/questions/15547198/export-html-table-to-csv this is taken from answer 2 on the page

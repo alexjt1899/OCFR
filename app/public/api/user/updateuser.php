@@ -5,13 +5,12 @@ require 'common.php';
 $db = DbConnection::getConnection();
 
 $stmt = $db->prepare(
-  'UPDATE TABLE People
+  'UPDATE People
   SET firstName = ?, lastName = ?, radioNumber = ?, stationNumber = ?, isActive = ?, phone = ?, email = ?, address = ?, gender = ?, startDate =?, Position = ?
   WHERE EmployeeID = ?'
 );
 
 $stmt->execute([
-  $_POST['EmployeeID'],
   $_POST['firstName'],
   $_POST['lastName'],
   $_POST['radioNumber'],
@@ -22,12 +21,12 @@ $stmt->execute([
   $_POST['address'],
   $_POST['gender'],
   $_POST['startDate'],
-  $_POST['Position']
+  $_POST['Position'],
+  $_POST['EmployeeID'],
 ]);
 
 // $memberId = $db->lastInsertID();
 
 header('HTTP/1.1 303 See Other');
-
-header('Location: ../user/');
-?>
+header('Content-Type: application/json');
+header('Location: ../People');
