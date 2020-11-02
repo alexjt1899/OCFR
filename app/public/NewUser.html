@@ -90,10 +90,27 @@
               <ul>
                 <span v-for="Detail in userdetailList">
                   <div v-if='USER.EmployeeID === Detail.id'>
-                    {{Detail.Name}}
+                    <li>
+                      {{Detail.Name}}
+                    </li>
                   </div>
                 </span>
+                
               </ul>
+
+        <!--      <ul>
+                 <div v-for="Detail in certdetailList">
+                     <div v-if='Cert.CertID === Detail.id'>
+                       <li>
+                         {{Detail.Name}}
+                     </li>
+                 </div>
+                   <div v-else>
+
+                   </div>
+               </div>
+             </ul> -->
+
           </div>
         </td>
       </tr>
