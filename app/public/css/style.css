@@ -6,13 +6,14 @@ color: white;
 font-family: serif;
 font-size: 10px;
 text-align-last: center;
- 
+
 /* border: solid darkgoldenrod; */
 border-radius: 5px;
-background-size: cover;
+background-size: contain;
 background-image: url('../image/fire.jpg');
 background-repeat: no-repeat;
 margin-bottom: 2%;
+background-position: center;
 }
 
 h1 {
