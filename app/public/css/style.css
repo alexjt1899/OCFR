@@ -1,5 +1,7 @@
 header {
 background-color: darkred;
+
+
 color: white;
 font-family: serif;
 font-size: 10px;
@@ -7,7 +9,12 @@ text-align-last: center;
 padding-bottom: 10px;
 /* border: solid darkgoldenrod; */
 border-radius: 5px;
+background-size: cover;
+background-image: url('../image/fire.jpg');
+background-repeat: no-repeat;
+background-position: top left
 }
+
 h1 {
 margin-bottom: 4px;
 margin-top: 6px;
@@ -121,3 +128,8 @@ tr:hover{
   max-width:100%;
   border-radius: 10px;
 }
+
+
+.PageTitle{
+    margin-bottom: 50px;
+  }
