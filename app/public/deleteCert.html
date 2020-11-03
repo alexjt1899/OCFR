@@ -57,17 +57,17 @@
 </header>
 
 <section class="container-fluid" >
-    <h1 style="text-align:center">  Welcome To CertificatesList</h1>
+    <h1 style="text-align:center"> List of Certifications</h1>
     <div id="DeleteCert">
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th scope="col">CertID</th>
-            <!-- <th scope="col">CertName</th>
-            <th scope="col">CerAgency</th>
+            <th scope="col">Certification ID</th>
+            <th scope="col">Cerificaion Name</th>
+            <!-- <th scope="col">CerAgency</th>
             <th scope="col">CertLength</th>
-            <th scope="col">CertDescription</th>
-          </tr> -->
+            <th scope="col">CertDescription</th> -->
+          </tr>
         </thead>
         <tbody class="text-center">
           <tr v-for="Cert in certList" v-on:click="activecert = Cert">
@@ -78,26 +78,27 @@
             <td> {{ Cert.CertDescription }}</td> -->
           </tr>
         </tbody>
-      </table>
+      </table><br><br><br>
 
+<h1>Please Put Certification ID that you would like to delete</h1>
       <form v-on:submit.prevent ="deleteCertification()" >
         <div class="col">
-          <label for="CertID">CertID</label>
+          <label for="CertID">Certification ID:</label>
           <input type="text" v-model="activecert.CertID" class="form-control" id="CertID" readonly>
           <div id="success"></div>
-          <button class="btn btn-primary btn-xl text-uppercase"  id="submit" type="submit">Delete Certifcation</button>
+          <button class="btn btn-primary btn-xl text-uppercase"  id="submit" type="submit">Delete</button>
         </div>
       </form>
     </div>
 
     <form method="post" action="Certificatelist.html" id="certificates" name="certificates" novalidate="novalidate">
       <div class="col">
-          <div id="success"></div>
-          <button class="btn btn-primary btn-xl text-uppercase" type="submit">Return</button>
+          <div id="success"></div><br>
+          <button class="btn btn-primary btn-xl text-uppercase" type="submit">Back</button>
       </div>
     </form>
   </body>
-</section>
+</section><br><br><br>
   <!-- development version, includes helpful console warnings -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
