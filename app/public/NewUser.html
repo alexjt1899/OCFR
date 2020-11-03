@@ -135,11 +135,16 @@
         <label for="lastName"> Last Name: </label>
         <input type="textarea" v-model="newUser.lastName" class="form-control" id="lastName"><br>
         <label for="radioNumber"> Radio Number: </label>
-        <input type="textarea" v-model="newUser.radioNumber" class="form-control" id="radioNumber"><br>
+        <input type="number" v-model="newUser.radioNumber" class="form-control" id="radioNumber"><br>
         <label for="stationNumber"> Station Number: </label>
-        <input type="textarea" v-model="newUser.stationNumber" class="form-control" id="stationNumber"><br>
+        <input type="number" v-model="newUser.stationNumber" class="form-control" id="stationNumber"><br>
         <label for="isActive"> Is Active? </label>
-        <input type="textarea" v-model="newUser.isActive" class="form-control" id="isActive"><br>
+        <select v-model="newUser.isActive" class="form-control" id="isActive">
+            <option> yes </option>
+            <option> no </option>
+        </select>
+      <!--  <input type="textarea" v-model="newUser.isActive" class="form-control" id="isActive">--><br>
+
         <label for="phone"> Phone Number: </label>
         <input type="textarea" v-model="newUser.phone" class="form-control" id="phone"><br>
         <label for="email"> Email Address: </label>
