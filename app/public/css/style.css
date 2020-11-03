@@ -6,7 +6,7 @@ color: white;
 font-family: serif;
 font-size: 10px;
 text-align-last: center;
-padding-bottom: 10px;
+ 
 /* border: solid darkgoldenrod; */
 border-radius: 5px;
 background-size: cover;
@@ -32,6 +32,7 @@ padding: 8px;
 /* align-content: center;
 text-align-last: center;
 text-align: center; */
+margin-bottom: 0%;
 }
 a{
 color: darkred;
@@ -133,3 +134,11 @@ tr:hover{
 .PageTitle{
     margin-bottom: 50px;
   }
+
+
+#headercontainer {
+
+  margin-bottom: 0px;
+
+
+}
