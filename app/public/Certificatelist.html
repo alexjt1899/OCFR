@@ -118,8 +118,8 @@
             <label for="CerAgency">Certification Agency:</label>
             <input type="text" v-model="newCertification.CerAgency" class="form-control" id="CerAgency">
 
-            <label for="CertLength">Standard Expiration Period:</label>
-            <input type="text" v-model="newCertification.CertLength" class="form-control" id="CertLength">
+            <label for="CertLength">Standard Expiration Period (days):</label>
+            <input type="number" v-model="newCertification.CertLength" class="form-control" id="CertLength">
 
             <label for="CertDescription">Certification Description:</label>
             <input type="text" v-model="newCertification.CertDescription" class="form-control" id="CertDescription" aria-describedby="CertficationHelp">
